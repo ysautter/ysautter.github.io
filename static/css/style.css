@@ -1,0 +1,105 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(150,150,150,0.25);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    /*background: #1c3859;*/
+}
+
+header h1 {
+    font-family: "Source Code Pro", monospace;
+    margin-left: 2%;
+    padding: 0;
+    color: white;
+    font-size: 40px;
+}
+
+header nav {
+    margin-right: 2%;
+}
+header nav a {
+    text-decoration: none;
+    padding-right: 20px;
+    color: white;
+    font-size: 22px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: .02857em;
+
+}
+
+#landing {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 1600px;
+    background-image: url("/static/img/yannick.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    --landing-height: 100vh;
+}
+
+#landing-content {
+    margin-top: calc(0.15 * var(--landing-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#landing-content h2 {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 75px;
+}
+
+#landing-content p {
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 35px;
+}
+
+#landing-links {
+    margin-top: 4%;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*border: 1px solid red;*/
+    border-radius: 12px;
+    width: 35%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+#landing-links a {
+    color: inherit;
+}
+
+#about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
