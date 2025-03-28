@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/vendor/fa/all.min.css">
     <link rel="stylesheet" href="static/css/sourcecodepro.css">
+    <script src="static/js/index.js"></script>
 </head>
 <body>
 
 <header>
     <!--<h1>Yannick Sautter</h1>-->
     <nav>
+        <a href="#">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#cv">CV</a>
     </nav>
@@ -22,11 +24,11 @@
         <div id="landing-content">
             <div>
                 <h2>Yannick Sautter</h2>
-                <p>Software Developer</p>
+                <p><span class="typewrite" data-period="2000" data-type='[ "Software Engineer", "Cybersecurity Enthusiast", "Hobby Musician", "Arch User (btw)" ]'></span></p>
             </div>
             <div id="landing-links">
                 <a href="https://github.com/ysautter" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yannick-sautter-500918210/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://leetcode.com/u/ysautter/" target="_blank"><img src="static/css/vendor/icons/leetcode-svgrepo-com.svg" alt="icon" width="27" height="27"></a>
                 <a href="https://app.hackthebox.com/profile/811472" target="_blank"><img src="static/css/vendor/icons/hackthebox-svgrepo-com.svg" alt="icon" width="25" height="25"></a>
                 <a href="https://https://soundcloud.com/yannick-sautter" target="_blank"><img src="static/css/vendor/icons/soundcloud-svgrepo-com.svg" alt="icon" width="40" height="40"></a>
@@ -34,9 +36,280 @@
         </div>
     </section>
     <section id="about">
-        <p>Hey, thanks for stopping by! My name is Yannick Sautter and I'm a Software Developer.</p>
+        <div id="about-content">
+            <span>Hey, thanks for stopping by!</span>
+            <br>
+            <br>
+            <span>My Name is Yannick Sautter.<br> I have a passion for tinkering with software, especially I love enhancing my workflow in Linux. <br> During my studies, I focused on Cybersecurity and Machine Learning. </span>
+            <br>
+            <br>
+            <span> For more information checkout my resumé or for a quick overview see the timeline below.</span>
+        </div>
+        <div id="about-timeline">
+            <h1>Timeline</h1>
+            <ul>
+                <li style="--accent-color:#41516C">
+                    <div class="date">2014</div>
+                    <div class="end"></div>
+                    <div class="title">Abitur, Max-Planck-Gymnasium Saarlouis</div>
+                    <div class="descr">I completed my university entrance qualification with computer science as one of my exam subjects because I was able to choose and study it starting from the 10th grade.</div>
+                </li>
+                <li style="--accent-color:#205781">
+                    <div class="date">2015</div>
+                    <div class="title">Working Holiday, New Zealand</div>
+                    <div class="descr">After high school I went nine months abroad to New Zealand, where I had a "Working Holiday" visa. On the way back I stayed two months in South-East Asia.</div>
+                </li>
+                <li style="--accent-color:#98D2C0">
+                    <div class="date">2016</div>
+                    <div class="title">Technical Support, Arvato</div>
+                    <div class="descr">To fill the time between my travels and the start of my first bachelor semester I worked for Arvato, a service provider for the German internet and telecommunication provider O2.</div>
+                </li>
+                <li style="--accent-color:#6B7AA1">
+                    <div class="date">2019</div>
+                    <div class="title">Software Engineer, Freelancer</div>
+                    <div class="descr">During my bachelor studies I started working as freelancing software engineer.</div>
+                </li>
+                <li style="--accent-color:#27548A">
+                    <div class="date">2020</div>
+                    <div class="title">Computer Science Bachelor, Universität des Saarlandes</div>
+                    <div class="descr">I finished my bachelor degree with the bachelor thesis "Backdoor attacks against Generative Models and Autoencoders". Afterwards my supervisor and I tried publishing the results. You can find the pre-print <a href="https://arxiv.org/abs/2010.03007" target="_blank">here</a>.</div>
+                </li>
+                <li style="--accent-color:#1B5F8C">
+                    <div class="date">2020</div>
+                    <div class="title">Software Engineer, Tuxguard GmbH</div>
+                    <div class="descr">I developed functionalities on various systems such as Firewalls, Antivirus Endpoints and Mail Transfer Agents.</div>
+                </li>
+                <li style="--accent-color:#4CADAD">
+                    <div class="date">2024</div>
+                    <div class="title">Computer Science Master, RWTH Aachen</div>
+                    <div class="descr">My master studies had a strong focus on Cybersecurity and Machine Learning. I completed my master degree with the thesis "Internationalizing DGA Detection". With the help of my supervisor we published the results here.</div>
+                </li>
+                <li style="--accent-color:#3E5879">
+                    <div class="date">2024 - Current</div>
+                    <div class="title">Development Director, Tuxguard GmbH</div>
+                    <div class="descr">I lead the development of groupios. A comprehensive and secure multinenancy groupware solution.</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="cv">
+        <div id="cv-content">
+            <div id="cv-left">
+                <div id="cv-header">
+                    <h1>Yannick Sautter</h1>
+                    <h2>Software Engineer</h2>
+                </div>
+                <div id="cv-contact">
+                    <ul>
+                        <li><a href="mailto:contact@sautter.dev"><i class="fa-solid fa-envelope"></i> contact@sautter.dev</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Köln, NRW</li>
+                        <li><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank"><i class="fa-brands fa-linkedin"></i> yannick-sautter</a></li>
+                    </ul>
+                </div>
+                <div id="cv-education">
+                    <h1>Education</h1>
+                    <ul>
+                        <li>
+                            <div class="education-degree">
+                                Master of Science
+                            </div>
+                            <div class="education-field">
+                                Computer Science
+                            </div>
+                            <div class="education-location">
+                                <div class="education-location-name">
+                                    RWTH Aachen
+                                </div>
+                                <div class="education-location-address">
+                                    <i class="fa-solid fa-location-dot"></i> Templergraben 55, 52056 Aachen
+                                </div>
+                                <div class="education-location-duration">
+                                    <i class="fa-solid fa-calendar-days"></i> 2020 - 2024
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-degree">
+                                Bachelor of Science
+                            </div>
+                            <div class="education-field">
+                                Computer Science
+                            </div>
+                            <div class="education-location">
+                                <div class="education-location-name">
+                                    Universität des Saarlandes
+                                </div>
+                                <div class="education-location-address">
+                                    <i class="fa-solid fa-location-dot"></i> Campus, 66123 Saarbrücken
+                                </div>
+                                <div class="education-location-duration">
+                                    <i class="fa-solid fa-calendar-days"></i> 2016 - 2020
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="cv-skills">
+                    <h1>Skills</h1>
+                    <h2>Programming</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                        <li>Bash</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>C</li>
+                        <li>C#</li>
+                        <li>Go</li>
+                        <li>SQL</li>
+                        <li>TCL</li>
+                        <li>Flutter</li>
+                        <li>Dart</li>
+                    </ul>
+                    <h2>Frameworks</h2>
+                    <ul>
+                        <li>PyTorch</li>
+                        <li>Django</li>
+                        <li>FastAPI</li>
+                        <li>Bootstrap</li>
+                        <li>Haraka</li>
+                    </ul>
+                    <h2>Tools</h2>
+                    <ul>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>Nginx</li>
+                        <li>Apache</li>
+                        <li>Keycloak</li>
+                        <li>OpenLDAP</li>
+                        <li>Redis</li>
+                    </ul>
+                    <h2>Operating Systems</h2>
+                    <ul>
+                        <li>Linux (Arch, AlmaLinux, Ubuntu)</li>
+                        <li>BSD (FreeBSD)</li>
+                        <li>Windows</li>
+                    </ul>
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>German</li>
+                        <li>English</li>
+                        <li>French</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="cv-right">
+                <div id="cv-work-experience">
+                    <h1>Work Experience</h1>
+                    <ul>
+                        <li class="work-entry">
+                            <div class="work-header">
+                                <div class="work-header-left">
+                                    <div class="work-title">Development Director</div>
+                                    <div class="work-company">Tuxguard GmbH</div>
+                                </div>
+                                <div class="work-header-right">
+                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2024 - current</div>
+                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                </div>
+                            </div>
+                            <div class="work-description">
+                                <ul>
+                                    <li>Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="work-entry">
+                            <div class="work-header">
+                                <div class="work-header-left">
+                                    <div class="work-title">Software Engineer</div>
+                                    <div class="work-company">Tuxguard GmbH</div>
+                                </div>
+                                <div class="work-header-right">
+                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2019 - 2024</div>
+                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                </div>
+                            </div>
+                            <div class="work-description">
+                                <ul>
+                                    <li>Developed and implemented highly distributable software license infrastructure for antivirus endpoints.</li>
+                                    <li>Developed and implemented on-premises installable management server for antivirus endpoints.</li>
+                                    <li>Developed and implemented plugins for OPNsense.</li>
+                                    <li>Technical Support for the products</li>
+                                    <li>Administrative responsibility of DNS, Firewall and Networking infrastructure</li>
+                                    <li>Developed and implemented groupios</li>
+                                    <li>Developed and implemented webfilter client for Windows</li>
+                                    <li>Giving </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="work-entry">
+                            <div class="work-header">
+                                <div class="work-header-left">
+                                    <div class="work-title">Software Engineer</div>
+                                    <div class="work-company">Freelancer</div>
+                                </div>
+                                <div class="work-header-right">
+                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2019 - 2020</div>
+                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                </div>
+                            </div>
+                            <div class="work-description">
+                                <ul>
+                                    <li>Modernized legacy firewall UI</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="work-entry">
+                            <div class="work-header">
+                                <div class="work-header-left">
+                                    <div class="work-title">Technical Support</div>
+                                    <div class="work-company">GiGroup/Arvato</div>
+                                </div>
+                                <div class="work-header-right">
+                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2015 - 2016</div>
+                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Eiweiler</div>
+                                </div>
+                            </div>
+                            <div class="work-description">
+                                <ul>
+                                    <li>Technical Support</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="work-entry">
+                            <div class="work-header">
+                                <div class="work-header-left">
+                                    <div class="work-title">Working Holiday</div>
+                                    <div class="work-company">
+                                        Kerimoore Orchards LTD,<br>
+                                        Karioi Limited,<br>
+                                        J2 Contracting,<br>
+                                        New J R Contracting<br>
+
+                                    </div>
+                                </div>
+                                <div class="work-header-right">
+                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2014 - 2015</div>
+                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>New Zealand</div>
+                                </div>
+                            </div>
+                            <div class="work-description">
+                                <ul>
+                                    <li>Harvest Oranges</li>
+                                    <li>Harvest Grapes</li>
+                                    <li>Kiwi tree gardening</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
     </section>
 </main>
-
 </body>
 </html>
