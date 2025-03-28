@@ -116,9 +116,8 @@ header nav a {
 #about-content {
     margin-top: 4em;
     margin-bottom: 2em;
-    #border: 1px solid red;
-    font-size: 27px;
-    width: max(60rem, 66%);
+    font-size: min(27px, 2vh);
+    width: max(56rem, 66%);
 }
 
 #about-timeline {
@@ -149,8 +148,7 @@ header nav a {
     grid-auto-columns: max-content;
     column-gap: var(--col-gap);
     list-style: none;
-    #width: min(60rem, 90%);
-    width: max(60rem, 66%);
+    width: max(56rem, 66%);
     margin-inline: auto;
     padding: 0;
 }
@@ -184,7 +182,7 @@ header nav a {
 
 /* date */
 #about-timeline ul li .date {
-    --dateH: 3rem;
+    --dateH: 4vh;
     height: var(--dateH);
     margin-inline: calc(var(--inlineP) * -1);
 
@@ -192,7 +190,7 @@ header nav a {
     background-color: var(--accent-color);
 
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.7vh;
     font-weight: 700;
 
     display: grid;
@@ -225,6 +223,7 @@ header nav a {
     background: var(--bgColor);
     position: relative;
     padding-inline: 1.5rem;
+    font-size: min(23px, 1.6vh);
 }
 #about-timeline ul li .title {
     overflow: hidden;
@@ -237,7 +236,7 @@ header nav a {
     font-weight: 300;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 1000px) {
     #about-timeline ul {
         grid-template-columns: 1fr var(--line-w) 1fr;
     }
