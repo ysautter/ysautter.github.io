@@ -53,4 +53,34 @@ window.onload = function() {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
+
+
+    const toggle = document.getElementById('darkModeToggle');
+    const cvLeft = document.getElementById('cv-left');
+    const cvHeader = document.getElementById('cv-header');
+    const cvContact = document.getElementById('cv-contact');
+    const cvSkillsH2 = document.querySelectorAll('#cv-skills h2');
+    const cv = document.getElementById('cv');
+
+    toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+            cvLeft.style.backgroundColor = "#3E5879";
+            cvHeader.style.backgroundColor = "#2c3039";
+            cvContact.style.backgroundColor = "#2c3039";
+            cvSkillsH2.forEach(element => {
+                element.style.color = "#84b3dc";
+            })
+            cv.style.backgroundColor = "#283d4b"
+            cv.style.color = "white"
+        } else {
+            cvLeft.style.backgroundColor = "#b9cdda";
+            cvHeader.style.backgroundColor = "#373c47";
+            cvContact.style.backgroundColor = "#373c47";
+            cvSkillsH2.forEach(element => {
+                element.style.color = "#41516C";
+            })
+            cv.style.backgroundColor = "white";
+            cv.style.color = "black"
+        }
+    });
 };

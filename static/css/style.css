@@ -116,7 +116,8 @@ header nav a {
 #about-content {
     margin-top: 4em;
     margin-bottom: 2em;
-    font-size: min(27px, 2vh);
+    #font-size: min(27px, 2vh);
+    font-size: 27px;
     width: max(56rem, 66%);
 }
 
@@ -182,7 +183,7 @@ header nav a {
 
 /* date */
 #about-timeline ul li .date {
-    --dateH: 4vh;
+    --dateH: 2.5rem;
     height: var(--dateH);
     margin-inline: calc(var(--inlineP) * -1);
 
@@ -190,7 +191,8 @@ header nav a {
     background-color: var(--accent-color);
 
     color: white;
-    font-size: 1.7vh;
+    #font-size: 1.7vh;
+    font-size: 18px !important;
     font-weight: 700;
 
     display: grid;
@@ -223,7 +225,8 @@ header nav a {
     background: var(--bgColor);
     position: relative;
     padding-inline: 1.5rem;
-    font-size: min(23px, 1.6vh);
+    #font-size: min(23px, 1.6vh);
+    font-size: 17px;
 }
 #about-timeline ul li .title {
     overflow: hidden;
@@ -280,16 +283,98 @@ header nav a {
         border-color: transparent transparent transparent red;
     }
 }
+#about-timeline a {
+    text-decoration: none;
+    color: #4CADAD;
+}
 
 #cv {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    background-color: #283d4b;
+    color: white;
+}
+
+#buttons {
+    width: 210mm;
+    margin-bottom: 1rem;
+}
+
+#darkModeToggle {
+    display: none;
+}
+
+#switch {
+    width: 59px;
+    height: 30px;
+    background: #E0E0E0;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+}
+
+#switch:before {
+    content: '\f186';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+}
+
+#switch:after {
+    content: '\f185';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    width: 24px;
+    height: 16px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+}
+
+#darkModeToggle:checked + #switch{
+    background: #151515;
+    color: #fff;
+}
+
+#darkModeToggle:checked + #switch:after{
+    content: '\f186';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    left: 33px;
+    background: #3c3c3c;
+}
+
+#darkModeToggle:checked + #switch:before{
+    content: '\f185';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    right: auto;
+    left: 8px;
+}
+
+#darkModeToggle:checked + label.btn-color-mode-switch-inner{
+    /*background: #66BB6A; */
+    /*color: #fff;*/
 }
 
 #cv-content {
     display: flex;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     width: 210mm;
     min-height: 297mm;
     #border: 1px solid red;
@@ -313,7 +398,7 @@ header nav a {
 
 #cv-left {
     width: var(--left-width);
-    background: #b9cdda;
+    background: #3E5879;
 }
 #cv-right {
     width: calc(100% - var(--left-width));
@@ -321,7 +406,7 @@ header nav a {
 
 #cv-header{
     padding: 2rem 2rem 1rem 2rem;
-    background: #373c47;
+    background: #2c3039;
     color: white;
 }
 
@@ -338,7 +423,7 @@ header nav a {
 #cv-contact {
     #border: 1px solid blue;
     padding: 1rem 0 2rem 2rem;
-    background: #373c47;
+    background: #2c3039;
     color: white;
 }
 #cv-contact ul li {
@@ -405,7 +490,7 @@ header nav a {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: 17px;
-    color: #27548A;
+    color: #84b3dc;
 }
 
 #cv-skills ul {
@@ -479,4 +564,18 @@ header nav a {
 
 .work-description ul li {
     margin-bottom: 0.4rem !important;
+}
+
+
+
+#footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #373c47;
+    align-items: center;
+    color: white;
+    font-family: "Arial", sans-serif;
+    width: 100%;
 }
