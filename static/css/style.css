@@ -411,8 +411,9 @@ header nav a {
 }
 
 #cv-header h1 {
-    font-size: 23px;
+    font-size: 22px;
     text-transform: uppercase;
+    font-family: serif;
 }
 #cv-header h2 {
     font-size: 18px;
@@ -451,6 +452,7 @@ header nav a {
     margin-bottom: 1rem;
     font-size: 22px;
     text-transform: uppercase;
+    font-family: serif;
 }
 #cv-education ul li {
     margin-bottom: 1.5rem;
@@ -485,6 +487,7 @@ header nav a {
     margin-bottom: 1rem;
     font-size: 22px;
     text-transform: uppercase;
+    font-family: serif;
 }
 #cv-skills h2 {
     margin-top: 1rem;
@@ -515,6 +518,7 @@ header nav a {
     margin-bottom: 1rem;
     font-size: 22px;
     text-transform: uppercase;
+    font-family: serif;
 }
 
 .work-title {
