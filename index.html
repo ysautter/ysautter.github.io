@@ -2,373 +2,376 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yannick Sautter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yannick Sautter — Software Engineer</title>
+    <meta name="description" content="Portfolio of Yannick Sautter — Software Engineer specializing in Cybersecurity and Machine Learning. Based in Köln, Germany.">
+    <meta name="author" content="Yannick Sautter">
+    <meta property="og:title" content="Yannick Sautter — Software Engineer">
+    <meta property="og:description" content="Software Engineer specializing in Cybersecurity and Machine Learning. Based in Köln, Germany.">
+    <meta property="og:image" content="static/img/yannick.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sautter.dev">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yannick Sautter — Software Engineer">
+    <meta name="twitter:description" content="Software Engineer specializing in Cybersecurity and Machine Learning. Based in Köln, Germany.">
+    <meta name="twitter:image" content="static/img/yannick.jpg">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/vendor/fa/all.min.css">
     <link rel="stylesheet" href="static/css/sourcecodepro.css">
     <script src="static/js/index.js"></script>
+    <script src="static/js/graph.js"></script>
 </head>
-<body>
+<body class="m-0 p-0 bg-dark-bg">
 
-<header>
-    <!--<h1>Yannick Sautter</h1>-->
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#cv">CV</a>
+<div id="scroll-progress"></div>
+
+<header class="fixed w-full h-[50px] pt-[5px] top-0 flex justify-end items-center bg-[rgba(150,150,150,0.25)] backdrop-blur-sm shadow-md z-[1000]">
+    <nav class="mr-[2%]">
+        <a href="#" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">HOME</a>
+        <a href="#about" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">ABOUT</a>
+        <a href="#timeline" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">TIMELINE</a>
+        <a href="#skills" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">SKILLS</a>
+        <a href="#cv" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">CV</a>
     </nav>
 </header>
 
 <main>
-    <section id="landing">
-        <div id="landing-content">
+    <section id="landing" class="m-0 p-0 w-screen h-screen max-h-[1600px] bg-cover bg-center flex justify-center text-center" style="background-image: url('static/img/yannick.jpg'); --landing-height: 100vh;">
+        <div id="landing-content" class="mt-[calc(0.15*var(--landing-height))] flex flex-col items-center">
             <div>
-                <h2>Yannick Sautter</h2>
-                <p><span class="typewrite" data-period="2000" data-type='[ "Software Engineer", "Cybersecurity Enthusiast", "Hobby Musician", "Arch User (btw)" ]'></span></p>
+                <h2 class="font-mono font-normal text-white text-[40px] sm:text-[55px] md:text-[75px]">Yannick Sautter</h2>
+                <p class="text-white font-sans text-[20px] sm:text-[28px] md:text-[35px]"><span class="typewrite" data-period="2000" data-type='[ "Software Engineer", "Cybersecurity Enthusiast", "Hobby Musician", "Arch User (btw)" ]'></span></p>
             </div>
-            <div id="landing-links">
-                <a href="https://github.com/ysautter" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://leetcode.com/u/ysautter/" target="_blank"><img src="static/css/vendor/icons/leetcode-svgrepo-com.svg" alt="icon" width="27" height="27"></a>
-                <a href="https://app.hackthebox.com/profile/811472" target="_blank"><img src="static/css/vendor/icons/hackthebox-svgrepo-com.svg" alt="icon" width="25" height="25"></a>
-                <a href="https://soundcloud.com/yannick-sautter" target="_blank"><img src="static/css/vendor/icons/soundcloud-svgrepo-com.svg" alt="icon" width="40" height="40"></a>
+            <div id="landing-links" class="mt-[4%] rounded-xl w-[80%] sm:w-[50%] md:w-[35%] h-10 flex justify-evenly items-center text-[24px] sm:text-[28px] md:text-[30px] text-white">
+                <a href="https://github.com/ysautter" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://leetcode.com/u/ysautter/" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/leetcode-svgrepo-com.svg" alt="icon" width="27" height="27"></a>
+                <a href="https://app.hackthebox.com/profile/811472" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/hackthebox-svgrepo-com.svg" alt="icon" width="25" height="25"></a>
+                <a href="https://soundcloud.com/yannick-sautter" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/soundcloud-svgrepo-com.svg" alt="icon" width="40" height="40"></a>
             </div>
         </div>
     </section>
-    <section id="about">
-        <div id="about-content">
+
+    <section id="about" class="flex flex-col min-h-[50vh] bg-dark-section items-center font-mono text-white">
+        <div id="about-content" class="reveal mt-16 mb-8 text-[20px] sm:text-[24px] md:text-[27px] w-[90%] sm:w-[80%] md:w-[max(56rem,66%)] px-4 md:px-0">
             <span>Hey, thanks for stopping by!</span>
-            <br>
-            <br>
+            <br><br>
             <span>My name is Yannick Sautter.<br> I have a passion for tinkering with software, especially I love enhancing my workflow in Linux. <br> During my studies, I focused on Cybersecurity and Machine Learning. </span>
-            <br>
-            <br>
+            <br><br>
             <span> For more information checkout my resumé or for a quick overview see the timeline below.</span>
         </div>
-        <div id="about-timeline">
-            <h1>Timeline</h1>
-            <ul>
-                <li style="--accent-color:#41516C">
-                    <div class="date">2014</div>
-                    <div class="end"></div>
-                    <div class="title">Abitur, Max-Planck-Gymnasium Saarlouis</div>
-                    <div class="descr">I completed my university entrance qualification with computer science as one of my exam subjects because I was able to choose and study it starting from the 10th grade.</div>
+        <div id="timeline" class="mt-8 mb-8 p-4 md:p-8 text-white bg-dark-section w-full">
+            <h1 class="text-center reveal mb-12">Timeline</h1>
+            <ul class="timeline" id="timeline-list">
+                <div class="timeline-progress" id="timeline-progress"></div>
+                <li class="timeline-item" style="--accent-color:#41516C">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2014</span>
+                        <div class="timeline-title">Abitur, Max-Planck-Gymnasium Saarlouis</div>
+                        <div class="timeline-descr">I completed my university entrance qualification with computer science as one of my exam subjects because I was able to choose and study it starting from the 10th grade.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#205781">
-                    <div class="date">2015</div>
-                    <div class="title">Working Holiday, New Zealand</div>
-                    <div class="descr">After high school I went nine months abroad to New Zealand, where I had a "Working Holiday" visa. On the way back I stayed two months in South-East Asia.</div>
+                <li class="timeline-item" style="--accent-color:#205781">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2015</span>
+                        <div class="timeline-title">Working Holiday, New Zealand</div>
+                        <div class="timeline-descr">After high school I went nine months abroad to New Zealand, where I had a "Working Holiday" visa. On the way back I stayed two months in South-East Asia.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#98D2C0">
-                    <div class="date">2016</div>
-                    <div class="title">Technical Support, Arvato</div>
-                    <div class="descr">To fill the time between my travels and the start of my first bachelor semester I worked for Arvato, a service provider for the German internet and telecommunication provider O2.</div>
+                <li class="timeline-item" style="--accent-color:#98D2C0">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2016</span>
+                        <div class="timeline-title">Technical Support, Arvato</div>
+                        <div class="timeline-descr">To fill the time between my travels and the start of my first bachelor semester I worked for Arvato, a service provider for the German internet and telecommunication provider O2.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#6B7AA1">
-                    <div class="date">2019</div>
-                    <div class="title">Software Engineer, Freelancer</div>
-                    <div class="descr">During my bachelor studies I started working as freelancing software engineer.</div>
+                <li class="timeline-item" style="--accent-color:#6B7AA1">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2019</span>
+                        <div class="timeline-title">Software Engineer, Freelancer</div>
+                        <div class="timeline-descr">During my bachelor studies I started working as freelancing software engineer.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#27548A">
-                    <div class="date">2020</div>
-                    <div class="title">Computer Science Bachelor, Universität des Saarlandes</div>
-                    <div class="descr">I finished my bachelor degree with the bachelor thesis "Backdoor attacks against Generative Models and Autoencoders". You can find the results <a href="https://arxiv.org/abs/2010.03007" target="_blank">here</a>.</div>
+                <li class="timeline-item" style="--accent-color:#27548A">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2020</span>
+                        <div class="timeline-title">Computer Science Bachelor, Universität des Saarlandes</div>
+                        <div class="timeline-descr">I finished my bachelor degree with the bachelor thesis "Backdoor attacks against Generative Models and Autoencoders". You can find the results <a href="https://arxiv.org/abs/2010.03007" target="_blank" class="no-underline text-accent">here</a>.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#1B5F8C">
-                    <div class="date">2020</div>
-                    <div class="title">Software Engineer, Tuxguard GmbH</div>
-                    <div class="descr">I developed functionalities on various systems such as Firewalls, Antivirus Endpoints and Mail Transfer Agents.</div>
+                <li class="timeline-item" style="--accent-color:#1B5F8C">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2020</span>
+                        <div class="timeline-title">Software Engineer, Tuxguard GmbH</div>
+                        <div class="timeline-descr">I developed functionalities on various systems such as Firewalls, Antivirus Endpoints and Mail Transfer Agents.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#4CADAD">
-                    <div class="date">2024</div>
-                    <div class="title">Computer Science Master, RWTH Aachen</div>
-                    <div class="descr">My master studies had a strong focus on Cybersecurity and Machine Learning. I completed my master degree with the thesis "Internationalizing DGA Detection". We are currently in the process of publishing the results.</div>
+                <li class="timeline-item" style="--accent-color:#4CADAD">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2024</span>
+                        <div class="timeline-title">Computer Science Master, RWTH Aachen</div>
+                        <div class="timeline-descr">My master studies had a strong focus on Cybersecurity and Machine Learning. I completed my master degree with the thesis "Internationalizing DGA Detection". We are currently in the process of publishing the results.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#3E5879">
-                    <div class="date">2024 - 2025</div>
-                    <div class="title">Development Director, Tuxguard GmbH</div>
-                    <div class="descr">I lead the development of groupios. A comprehensive and secure multinenancy groupware solution.</div>
+                <li class="timeline-item" style="--accent-color:#3E5879">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2024 - 2025</span>
+                        <div class="timeline-title">Development Director, Tuxguard GmbH</div>
+                        <div class="timeline-descr">I lead the development of groupios. A comprehensive and secure multinenancy groupware solution.</div>
+                    </div>
                 </li>
-                <li style="--accent-color:#6B7AA1">
-                    <div class="date">2025 - Current</div>
-                    <div class="title">Development Director, step3IT GmbH</div>
-                    <div class="descr">After the acquisition of groupios by step3IT I continue to lead the development there.</div>
+                <li class="timeline-item" style="--accent-color:#6B7AA1">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2025 - Current</span>
+                        <div class="timeline-title">Development Director, step3IT GmbH</div>
+                        <div class="timeline-descr">After the acquisition of groupios by step3IT I continue to lead the development there.</div>
+                    </div>
                 </li>
             </ul>
         </div>
     </section>
-    <section id="cv">
-        <div id="buttons">
+
+    <section id="skills" class="py-16 w-full bg-dark-bg flex flex-col items-center text-white">
+        <h1 class="text-center text-2xl mb-12 font-mono reveal">Skills</h1>
+        <div class="w-[90%] max-w-[1100px]">
+            <div id="metro-map" class="metro-map reveal"></div>
+            <p class="text-sm text-gray-400 mt-8 reveal">Languages: German · English · French</p>
+        </div>
+    </section>
+
+    <section id="cv" class="pt-12 pb-12 w-full flex flex-col items-center justify-center bg-cv-bg text-white overflow-x-auto">
+        <div id="buttons" class="w-[90%] md:w-[210mm] mb-4">
             <div id="dark-mode-switch">
                 <input type="checkbox" id="darkModeToggle" checked>
                 <label for="darkModeToggle" id="switch"></label>
             </div>
         </div>
-        <div id="cv-content">
-            <div id="cv-left">
-                <div id="cv-header">
-                    <h1>Yannick Sautter</h1>
-                    <h2>Software Engineer</h2>
+        <div id="cv-content" class="reveal flex flex-col md:flex-row w-[95%] md:w-[210mm] min-h-[297mm] font-sans shadow-[2px_2px_19px_rgba(0,0,0,0.27)]">
+            <div id="cv-left" class="w-full md:w-[36%]">
+                <div id="cv-header" class="p-8 pb-4 text-white">
+                    <h1 class="text-[22px] uppercase font-serif">Yannick Sautter</h1>
+                    <h2 class="text-[18px] mt-2 italic">Software Engineer</h2>
                 </div>
-                <div id="cv-contact">
-                    <ul>
-                        <li><a href="mailto:contact@sautter.dev"><i class="fa-solid fa-envelope"></i> contact@sautter.dev</a></li>
-                        <li><i class="fa-solid fa-location-dot"></i> Köln, NRW</li>
-                        <li><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank"><i class="fa-brands fa-linkedin"></i> yannick-sautter</a></li>
+                <div id="cv-contact" class="pt-4 pb-8 pl-8 text-white">
+                    <ul class="list-none p-0 m-0">
+                        <li class="py-[0.2rem]"><a href="mailto:contact@sautter.dev" class="no-underline text-inherit"><i class="fa-solid fa-envelope w-[23px] text-center"></i> contact@sautter.dev</a></li>
+                        <li class="py-[0.2rem]"><i class="fa-solid fa-location-dot w-[23px] text-center"></i> Köln, NRW</li>
+                        <li class="py-[0.2rem]"><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank" class="no-underline text-inherit"><i class="fa-brands fa-linkedin w-[23px] text-center"></i> yannick-sautter</a></li>
                     </ul>
                 </div>
-                <div id="cv-education">
-                    <h1>Education</h1>
-                    <ul>
-                        <li>
-                            <div class="education-degree">
-                                Master of Science
-                            </div>
-                            <div class="education-field">
-                                Computer Science
-                            </div>
-                            <div class="education-location">
-                                <div class="education-location-name">
-                                    RWTH Aachen
-                                </div>
-                                <div class="education-location-address">
-                                    <i class="fa-solid fa-location-dot"></i> Templergraben 55, 52056 Aachen
-                                </div>
-                                <div class="education-location-duration">
-                                    <i class="fa-solid fa-calendar-days"></i> 2020 - 2024
-                                </div>
+                <div id="cv-education" class="m-8">
+                    <h1 class="border-b border-current mt-4 mb-4 text-[22px] uppercase font-serif">Education</h1>
+                    <ul class="list-none p-0 m-0">
+                        <li class="mb-6">
+                            <div class="mb-[0.3rem] text-[19px] font-bold">Master of Science</div>
+                            <div class="mb-[0.3rem] italic">Computer Science</div>
+                            <div class="mb-[0.3rem]">
+                                <div>RWTH Aachen</div>
+                                <div class="text-[13px]"><i class="fa-solid fa-location-dot text-gray-500"></i> Templergraben 55, 52056 Aachen</div>
+                                <div class="text-[13px]"><i class="fa-solid fa-calendar-days text-gray-500"></i> 2020 - 2024</div>
                             </div>
                         </li>
-                        <li>
-                            <div class="education-degree">
-                                Bachelor of Science
-                            </div>
-                            <div class="education-field">
-                                Computer Science
-                            </div>
-                            <div class="education-location">
-                                <div class="education-location-name">
-                                    Universität des Saarlandes
-                                </div>
-                                <div class="education-location-address">
-                                    <i class="fa-solid fa-location-dot"></i> Campus, 66123 Saarbrücken
-                                </div>
-                                <div class="education-location-duration">
-                                    <i class="fa-solid fa-calendar-days"></i> 2016 - 2020
-                                </div>
+                        <li class="mb-6">
+                            <div class="mb-[0.3rem] text-[19px] font-bold">Bachelor of Science</div>
+                            <div class="mb-[0.3rem] italic">Computer Science</div>
+                            <div class="mb-[0.3rem]">
+                                <div>Universität des Saarlandes</div>
+                                <div class="text-[13px]"><i class="fa-solid fa-location-dot text-gray-500"></i> Campus, 66123 Saarbrücken</div>
+                                <div class="text-[13px]"><i class="fa-solid fa-calendar-days text-gray-500"></i> 2016 - 2020</div>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div id="cv-skills">
-                    <h1>Skills</h1>
-                    <h2>Programming</h2>
-                    <ul>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>HTML/CSS</li>
-                        <li>Java</li>
-                        <li>Bash</li>
-                        <li>PHP</li>
-                        <li>C</li>
-                        <li>C#</li>
-                        <li>Go</li>
-                        <li>SQL</li>
-                        <li>TCL</li>
-                        <li>Flutter</li>
-                        <li>Dart</li>
+                <div id="cv-skills" class="m-8">
+                    <h1 class="border-b border-current mt-4 mb-4 text-[22px] uppercase font-serif">Skills</h1>
+                    <h2 class="mt-4 mb-2 text-[17px]">Programming</h2>
+                    <ul class="list-disc pl-[19px]">
+                        <li class="mb-[0.2rem] text-[15px]">Python</li>
+                        <li class="mb-[0.2rem] text-[15px]">JavaScript</li>
+                        <li class="mb-[0.2rem] text-[15px]">HTML/CSS</li>
+                        <li class="mb-[0.2rem] text-[15px]">Java</li>
+                        <li class="mb-[0.2rem] text-[15px]">Bash</li>
+                        <li class="mb-[0.2rem] text-[15px]">PHP</li>
+                        <li class="mb-[0.2rem] text-[15px]">C</li>
+                        <li class="mb-[0.2rem] text-[15px]">C#</li>
+                        <li class="mb-[0.2rem] text-[15px]">Go</li>
+                        <li class="mb-[0.2rem] text-[15px]">SQL</li>
+                        <li class="mb-[0.2rem] text-[15px]">TCL</li>
+                        <li class="mb-[0.2rem] text-[15px]">Flutter</li>
+                        <li class="mb-[0.2rem] text-[15px]">Dart</li>
                     </ul>
-                    <h2>Frameworks</h2>
-                    <ul>
-                        <li>PyTorch</li>
-                        <li>Transformers</li>
-                        <li>Django</li>
-                        <li>FastAPI</li>
-                        <li>Express</li>
-                        <li>Bootstrap</li>
-                        <li>Haraka</li>
-                        <li>.NET</li>
+                    <h2 class="mt-4 mb-2 text-[17px]">Frameworks</h2>
+                    <ul class="list-disc pl-[19px]">
+                        <li class="mb-[0.2rem] text-[15px]">PyTorch</li>
+                        <li class="mb-[0.2rem] text-[15px]">Transformers</li>
+                        <li class="mb-[0.2rem] text-[15px]">Django</li>
+                        <li class="mb-[0.2rem] text-[15px]">FastAPI</li>
+                        <li class="mb-[0.2rem] text-[15px]">Express</li>
+                        <li class="mb-[0.2rem] text-[15px]">Bootstrap</li>
+                        <li class="mb-[0.2rem] text-[15px]">Haraka</li>
+                        <li class="mb-[0.2rem] text-[15px]">.NET</li>
                     </ul>
-                    <h2>Tools</h2>
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Nginx</li>
-                        <li>Apache</li>
-                        <li>Keycloak</li>
-                        <li>OpenLDAP</li>
-                        <li>Redis</li>
-                        <li>RabbitMQ</li>
-                        <li>WiX Installer</li>
+                    <h2 class="mt-4 mb-2 text-[17px]">Tools</h2>
+                    <ul class="list-disc pl-[19px]">
+                        <li class="mb-[0.2rem] text-[15px]">Git</li>
+                        <li class="mb-[0.2rem] text-[15px]">Docker</li>
+                        <li class="mb-[0.2rem] text-[15px]">Nginx</li>
+                        <li class="mb-[0.2rem] text-[15px]">Apache</li>
+                        <li class="mb-[0.2rem] text-[15px]">Keycloak</li>
+                        <li class="mb-[0.2rem] text-[15px]">OpenLDAP</li>
+                        <li class="mb-[0.2rem] text-[15px]">Redis</li>
+                        <li class="mb-[0.2rem] text-[15px]">RabbitMQ</li>
+                        <li class="mb-[0.2rem] text-[15px]">WiX Installer</li>
                     </ul>
-                    <h2>Operating Systems</h2>
-                    <ul>
-                        <li>Linux (Arch, AlmaLinux, Ubuntu)</li>
-                        <li>BSD (FreeBSD)</li>
-                        <li>Windows</li>
+                    <h2 class="mt-4 mb-2 text-[17px]">Operating Systems</h2>
+                    <ul class="list-disc pl-[19px]">
+                        <li class="mb-[0.2rem] text-[15px]">Linux (Arch, AlmaLinux, Ubuntu)</li>
+                        <li class="mb-[0.2rem] text-[15px]">BSD (FreeBSD)</li>
+                        <li class="mb-[0.2rem] text-[15px]">Windows</li>
                     </ul>
-                    <h2>Languages</h2>
-                    <ul>
-                        <li>German</li>
-                        <li>English</li>
-                        <li>French</li>
+                    <h2 class="mt-4 mb-2 text-[17px]">Languages</h2>
+                    <ul class="list-disc pl-[19px]">
+                        <li class="mb-[0.2rem] text-[15px]">German</li>
+                        <li class="mb-[0.2rem] text-[15px]">English</li>
+                        <li class="mb-[0.2rem] text-[15px]">French</li>
                     </ul>
                 </div>
             </div>
-            <div id="cv-right">
-                <div id="cv-work-experience">
-                    <h1>Work Experience</h1>
-                    <ul>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Development Director groupios</div>
-                                    <div class="work-company">step3IT GmbH</div>
+            <div id="cv-right" class="w-full md:w-[64%]">
+                <div id="cv-work-experience" class="m-8">
+                    <h1 class="border-b border-current mt-4 mb-4 text-[22px] uppercase font-serif">Work Experience</h1>
+                    <ul class="list-none p-0 m-0">
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Development Director groupios</div>
+                                    <div>step3IT GmbH</div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2025 - current</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2025 - current</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
+                            </ul>
                         </li>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Development Director</div>
-                                    <div class="work-company">Tuxguard GmbH</div>
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Development Director</div>
+                                    <div>Tuxguard GmbH</div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2024 - 2025</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2024 - 2025</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
+                            </ul>
                         </li>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Software Engineer</div>
-                                    <div class="work-company">Tuxguard GmbH</div>
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Software Engineer</div>
+                                    <div>Tuxguard GmbH</div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2020 - 2024</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2020 - 2024</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Developed and implemented highly distributable software license infrastructure for antivirus endpoints.</li>
-                                    <li>Developed and implemented on-premises installable management server for antivirus endpoints.</li>
-                                    <li>Developed and implemented plugins for OPNsense.</li>
-                                    <li>Technical Support for the products</li>
-                                    <li>Administrative responsibility of DNS, Firewall and Networking infrastructure</li>
-                                    <li>Developed and implemented on-premises installable multitenancy e-mail server and gateway server</li>
-                                    <li>Developed and implemented webfilter client for Windows</li>
-                                    <li>Giving training courses for the developed software</li>
-                                    <li>Writing and maintaining manuals for the products</li>
-                                    <li>Maintaining license infrastructure</li>
-                                    <li>Setting up CI/CD pipelines in GitLab</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Developed and implemented highly distributable software license infrastructure for antivirus endpoints.</li>
+                                <li class="mb-1">Developed and implemented on-premises installable management server for antivirus endpoints.</li>
+                                <li class="mb-1">Developed and implemented plugins for OPNsense.</li>
+                                <li class="mb-1">Technical Support for the products</li>
+                                <li class="mb-1">Administrative responsibility of DNS, Firewall and Networking infrastructure</li>
+                                <li class="mb-1">Developed and implemented on-premises installable multitenancy e-mail server and gateway server</li>
+                                <li class="mb-1">Developed and implemented webfilter client for Windows</li>
+                                <li class="mb-1">Giving training courses for the developed software</li>
+                                <li class="mb-1">Writing and maintaining manuals for the products</li>
+                                <li class="mb-1">Maintaining license infrastructure</li>
+                                <li class="mb-1">Setting up CI/CD pipelines in GitLab</li>
+                            </ul>
                         </li>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Software Engineer</div>
-                                    <div class="work-company">Freelancer</div>
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Software Engineer</div>
+                                    <div>Freelancer</div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2019 - 2020</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Remote</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2019 - 2020</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Revamped the user interface of a legacy firewall system to enhance usability and functionality.</li>
-                                    <li>Designed and implemented a multitenancy firewall management interface to support multiple users and streamline operations.</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Revamped the user interface of a legacy firewall system to enhance usability and functionality.</li>
+                                <li class="mb-1">Designed and implemented a multitenancy firewall management interface to support multiple users and streamline operations.</li>
+                            </ul>
                         </li>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Technical Support</div>
-                                    <div class="work-company">GiGroup/Arvato</div>
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Technical Support</div>
+                                    <div>GiGroup/Arvato</div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2015 - 2016</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Eiweiler</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2015 - 2016</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Eiweiler</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Provided technical support in a call center, assisting clients with home network and internet connectivity issues. Utilized communication skills and technical expertise to deliver effective solutions and enhance customer satisfaction.</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Provided technical support in a call center, assisting clients with home network and internet connectivity issues. Utilized communication skills and technical expertise to deliver effective solutions and enhance customer satisfaction.</li>
+                            </ul>
                         </li>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Working Holiday</div>
-                                    <div class="work-company">
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Working Holiday</div>
+                                    <div>
                                         Kerimoore Orchards LTD,<br>
                                         Karioi Limited,<br>
                                         J2 Contracting,<br>
-                                        New J R Contracting<br>
-
+                                        New J R Contracting
                                     </div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2014 - 2015</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>New Zealand</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2014 - 2015</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>New Zealand</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Engaged in the harvesting and sorting of oranges to ensure quality standards</li>
-                                    <li>Participated in grape harvesting, focusing on efficiency and precision</li>
-                                    <li>Managed kiwi orchard tasks, including planting, pruning, and general garden maintenance</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Engaged in the harvesting and sorting of oranges to ensure quality standards</li>
+                                <li class="mb-1">Participated in grape harvesting, focusing on efficiency and precision</li>
+                                <li class="mb-1">Managed kiwi orchard tasks, including planting, pruning, and general garden maintenance</li>
+                            </ul>
                         </li>
-                        <li class="work-entry">
-                            <div class="work-header">
-                                <div class="work-header-left">
-                                    <div class="work-title">Internship</div>
-                                    <div class="work-company">
-                                        Net-Compass
-
-                                    </div>
+                        <li class="mb-7">
+                            <div class="flex justify-between mb-3 items-start">
+                                <div>
+                                    <div class="font-bold text-[19px] mb-1">Internship</div>
+                                    <div>Net-Compass</div>
                                 </div>
-                                <div class="work-header-right">
-                                    <div class="work-duration"><i class="fa-solid fa-calendar-days"></i>2012</div>
-                                    <div class="work-location"><i class="fa-solid fa-location-dot"></i>Lebach</div>
+                                <div class="w-[125px]">
+                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2012</div>
+                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Lebach</div>
                                 </div>
                             </div>
-                            <div class="work-description">
-                                <ul>
-                                    <li>Assisted in populating and managing data within the CMS to ensure accuracy and completeness.</li>
-                                </ul>
-                            </div>
+                            <ul class="list-disc pl-[19px]">
+                                <li class="mb-1">Assisted in populating and managing data within the CMS to ensure accuracy and completeness.</li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
-
-
         </div>
     </section>
-    <section id="footer">
-        <span>&copy; 2025 Yannick Sautter</span>
+
+    <section id="footer" class="flex justify-center py-4 bg-dark-bg items-center text-white font-sans w-full">
+        <span>&copy; 2026 Yannick Sautter</span>
     </section>
 </main>
 </body>

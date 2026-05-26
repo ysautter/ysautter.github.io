@@ -1,0 +1,26 @@
+{
+  "name": "ysautter.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i static/css/input.css -o static/css/style.css --minify",
+    "dev": "tailwindcss -i static/css/input.css -o static/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysautter/ysautter.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ysautter/ysautter.github.io/issues"
+  },
+  "homepage": "https://github.com/ysautter/ysautter.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
+}

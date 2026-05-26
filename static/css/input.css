@@ -1,0 +1,437 @@
+@import "tailwindcss";
+
+@theme {
+    --font-mono: "Source Code Pro", monospace;
+    --font-sans: "Arial", sans-serif;
+    --font-roboto: "Roboto", "Helvetica", "Arial", sans-serif;
+
+    --color-dark-bg: #373c47;
+    --color-dark-section: #0d2136;
+    --color-cv-bg: #283d4b;
+    --color-cv-left: #3E5879;
+    --color-cv-header: #2c3039;
+    --color-accent: #4CADAD;
+    --color-accent-light: #84b3dc;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Scroll progress indicator */
+    #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--color-accent);
+        z-index: 1001;
+        width: 0%;
+        transition: width 0.1s linear;
+    }
+
+    /* Scroll reveal animations */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .reveal-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .reveal-right {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@layer components {
+    /* Timeline */
+    .timeline {
+        --line-w: 4px;
+        position: relative;
+        width: 100%;
+        max-width: max(56rem, 66%);
+        margin-inline: auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Vertical track line */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--line-w);
+        height: 100%;
+        background: rgba(225, 225, 225, 0.3);
+        border-radius: calc(var(--line-w) / 2);
+    }
+
+    /* Progress fill */
+    .timeline-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--line-w);
+        height: 0%;
+        background: var(--color-accent);
+        border-radius: calc(var(--line-w) / 2);
+        z-index: 1;
+        transition: none;
+    }
+
+    /* Timeline item */
+    .timeline-item {
+        position: relative;
+        padding-left: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
+    }
+
+    /* Circle marker */
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: calc(var(--line-w) / 2);
+        top: 0.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        background: var(--color-dark-section);
+        border: 3px solid rgba(225, 225, 225, 0.4);
+        border-radius: 50%;
+        transform: translateX(-50%) scale(1);
+        z-index: 2;
+        transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s ease;
+    }
+
+    /* Active state: lit up by progress */
+    .timeline-item.active::before {
+        border-color: var(--accent-color);
+        background: var(--accent-color);
+        transform: translateX(-50%) scale(1.3);
+    }
+
+    /* Date badge */
+    .timeline-date {
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        background-color: var(--accent-color);
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 4px;
+        margin-bottom: 0.75rem;
+        opacity: 0.6;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .timeline-item.active .timeline-date {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .timeline-title {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        transition: color 0.4s ease;
+    }
+
+    .timeline-item.active .timeline-title {
+        color: var(--color-accent);
+    }
+
+    .timeline-descr {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    /* Card container */
+    .timeline-card {
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.4s ease;
+    }
+
+    .timeline-item.active .timeline-card {
+        border-color: rgba(76, 173, 173, 0.3);
+    }
+
+    /* Slide-in animation */
+    .timeline-item .timeline-card {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    .timeline-item.visible .timeline-card {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Desktop: two columns */
+    @media (min-width: 1000px) {
+        .timeline::before,
+        .timeline-progress {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            width: 50%;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        /* Left side (odd) */
+        .timeline-item:nth-child(odd) {
+            padding-left: 0;
+            padding-right: 2.5rem;
+            margin-left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(odd)::before {
+            left: auto;
+            right: 0;
+            transform: translateX(50%) scale(1);
+        }
+        .timeline-item:nth-child(odd).active::before {
+            transform: translateX(50%) scale(1.3);
+        }
+        .timeline-item:nth-child(odd) .timeline-card {
+            transform: translateX(-40px);
+        }
+        .timeline-item:nth-child(odd).visible .timeline-card {
+            transform: translateX(0);
+        }
+
+        /* Right side (even) */
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+            padding-left: 2.5rem;
+            padding-right: 0;
+            text-align: left;
+        }
+        .timeline-item:nth-child(even)::before {
+            left: 0;
+            transform: translateX(-50%) scale(1);
+        }
+        .timeline-item:nth-child(even).active::before {
+            transform: translateX(-50%) scale(1.3);
+        }
+        .timeline-item:nth-child(even) .timeline-card {
+            transform: translateX(40px);
+        }
+        .timeline-item:nth-child(even).visible .timeline-card {
+            transform: translateX(0);
+        }
+    }
+
+    /* Dark mode toggle switch */
+    #darkModeToggle {
+        display: none;
+    }
+
+    #switch {
+        box-sizing: content-box;
+        width: 59px;
+        height: 30px;
+        background: #E0E0E0;
+        border-radius: 26px;
+        position: relative;
+        transition: all 0.3s ease;
+        display: block;
+        cursor: pointer;
+    }
+
+    #switch::before,
+    #switch::after {
+        box-sizing: content-box;
+    }
+
+    #switch::before {
+        content: '\f186';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: 13px;
+        line-height: 30px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+
+    #switch::after {
+        content: '\f185';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: 13px;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 6px -2px #111;
+    }
+
+    #darkModeToggle:checked + #switch {
+        background: #151515;
+        color: #fff;
+    }
+
+    #darkModeToggle:checked + #switch::after {
+        content: '\f186';
+        left: 31px;
+        background: #3c3c3c;
+    }
+
+    #darkModeToggle:checked + #switch::before {
+        content: '\f185';
+        right: auto;
+        left: 10px;
+    }
+
+    /* CV color defaults (must live in components so light mode can override) */
+    #cv-left {
+        background-color: #3E5879;
+    }
+    #cv-header,
+    #cv-contact {
+        background-color: #2c3039;
+    }
+    #cv-skills h2 {
+        color: #84b3dc;
+    }
+
+    /* CV light mode overrides */
+    .cv-light {
+        background-color: white !important;
+        color: black !important;
+    }
+    .cv-light #cv-left {
+        background-color: #b9cdda;
+    }
+    .cv-light #cv-header,
+    .cv-light #cv-contact {
+        background-color: #373c47;
+    }
+    .cv-light #cv-skills h2 {
+        color: #41516C;
+    }
+
+    /* Typewriter cursor */
+    .typewrite > .wrap {
+        border-right: 0.08em solid #fff;
+    }
+
+    /* ─── Metro Map ─────────────────────────────────────────────── */
+    .metro-map {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .metro-line {
+        position: relative;
+    }
+
+    .metro-line-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .metro-line-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .metro-line-name {
+        font-family: "Arial", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .metro-track {
+        border-left: 3px solid;
+        margin-left: 6px;
+        padding-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .metro-segment {
+        position: relative;
+    }
+
+    .metro-segment-label {
+        font-family: "Arial", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.35);
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .metro-stops {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+    }
+
+    .metro-stop {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .metro-stop-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .metro-stop-name {
+        font-family: "Arial", sans-serif;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+}

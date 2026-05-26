@@ -48,39 +48,80 @@ window.onload = function() {
             new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
-
 
     const toggle = document.getElementById('darkModeToggle');
-    const cvLeft = document.getElementById('cv-left');
-    const cvHeader = document.getElementById('cv-header');
-    const cvContact = document.getElementById('cv-contact');
-    const cvSkillsH2 = document.querySelectorAll('#cv-skills h2');
     const cv = document.getElementById('cv');
 
     toggle.addEventListener('change', () => {
-        if (toggle.checked) {
-            cvLeft.style.backgroundColor = "#3E5879";
-            cvHeader.style.backgroundColor = "#2c3039";
-            cvContact.style.backgroundColor = "#2c3039";
-            cvSkillsH2.forEach(element => {
-                element.style.color = "#84b3dc";
-            })
-            cv.style.backgroundColor = "#283d4b"
-            cv.style.color = "white"
-        } else {
-            cvLeft.style.backgroundColor = "#b9cdda";
-            cvHeader.style.backgroundColor = "#373c47";
-            cvContact.style.backgroundColor = "#373c47";
-            cvSkillsH2.forEach(element => {
-                element.style.color = "#41516C";
-            })
-            cv.style.backgroundColor = "white";
-            cv.style.color = "black"
+        cv.classList.toggle('cv-light', !toggle.checked);
+    });
+
+    // Scroll progress bar (top of page)
+    const progressBar = document.getElementById('scroll-progress');
+
+    // Timeline progress
+    const timelineEl = document.getElementById('timeline-list');
+    const timelineProgress = document.getElementById('timeline-progress');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        progressBar.style.width = (scrollTop / scrollHeight) * 100 + '%';
+
+        // Timeline progress fill & active items
+        if (timelineEl && timelineProgress) {
+            const rect = timelineEl.getBoundingClientRect();
+            const trigger = window.innerHeight * 0.7;
+
+            if (rect.top < trigger) {
+                const traveled = trigger - rect.top;
+                const pct = Math.min(Math.max(traveled / rect.height, 0), 1) * 100;
+                timelineProgress.style.height = pct + '%';
+
+                const progressPx = (pct / 100) * rect.height;
+                timelineItems.forEach(item => {
+                    const itemTop = item.offsetTop;
+                    if (progressPx >= itemTop) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            } else {
+                timelineProgress.style.height = '0%';
+                timelineItems.forEach(item => item.classList.remove('active'));
+            }
         }
+    });
+
+    // Scroll reveal animations (generic)
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Timeline item reveal (slide in from sides)
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.timeline-item').forEach(el => {
+        timelineObserver.observe(el);
     });
 };
