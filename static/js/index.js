@@ -72,7 +72,7 @@ window.onload = function() {
         // Timeline progress fill & active items
         if (timelineEl && timelineProgress) {
             const rect = timelineEl.getBoundingClientRect();
-            const trigger = window.innerHeight * 0.7;
+            const trigger = window.innerHeight * 0.5; // progress follows the vertical center of the viewport
 
             if (rect.top < trigger) {
                 const traveled = trigger - rect.top;
