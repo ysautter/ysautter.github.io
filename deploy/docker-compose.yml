@@ -1,0 +1,43 @@
+# sautter.dev - static personal website.
+#
+# Lives in /opt/sautter.dev on mx.sautter.dev. Deployed from the repo with
+# ./deploy.sh, which builds the CSS locally and syncs the static files to ./site.
+#
+# Traffic path: sniproxy (:80/:443, /opt/stalwart) -> nginx-proxy (/opt/nginx-proxy)
+# -> this container on the external "web" network. nginx-proxy picks it up via
+# VIRTUAL_HOST, acme-companion issues the certificate via LETSENCRYPT_HOST.
+# HSTS is added by nginx-proxy; all other security headers come from
+# nginx/security-headers.conf.
+
+services:
+  web:
+    image: nginxinc/nginx-unprivileged:1.29-alpine
+    container_name: sautter-dev
+    restart: unless-stopped
+    environment:
+      VIRTUAL_HOST: sautter.dev,www.sautter.dev
+      VIRTUAL_PORT: "8080"
+      LETSENCRYPT_HOST: sautter.dev,www.sautter.dev
+      NGINX_ENTRYPOINT_QUIET_LOGS: "1"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/security-headers.conf:/etc/nginx/snippets/security-headers.conf:ro
+    # Static files only: no writable filesystem, no capabilities.
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 64m
+    networks:
+      - web
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  web:
+    external: true

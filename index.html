@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yannick Sautter — Software Engineer</title>
-    <meta name="description" content="Portfolio of Yannick Sautter — Software Engineer specializing in Cybersecurity and Machine Learning. Based in Köln, Germany.">
+    <meta name="description" content="Yannick Sautter — Development Director of groupios at step3IT. Software engineer working on secure e-mail and groupware, security operations and machine-learning-based threat detection. Based in Köln, Germany.">
     <meta name="author" content="Yannick Sautter">
+    <link rel="canonical" href="https://sautter.dev/">
     <meta property="og:title" content="Yannick Sautter — Software Engineer">
-    <meta property="og:description" content="Software Engineer specializing in Cybersecurity and Machine Learning. Based in Köln, Germany.">
-    <meta property="og:image" content="static/img/yannick.jpg">
+    <meta property="og:description" content="Software engineer working on secure e-mail and groupware, security operations and ML-based threat detection. Based in Köln, Germany.">
+    <meta property="og:image" content="https://sautter.dev/static/img/yannick.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sautter.dev">
+    <meta property="og:url" content="https://sautter.dev/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yannick Sautter — Software Engineer">
-    <meta name="twitter:description" content="Software Engineer specializing in Cybersecurity and Machine Learning. Based in Köln, Germany.">
-    <meta name="twitter:image" content="static/img/yannick.jpg">
+    <meta name="twitter:description" content="Software engineer working on secure e-mail and groupware, security operations and ML-based threat detection. Based in Köln, Germany.">
+    <meta name="twitter:image" content="https://sautter.dev/static/img/yannick.jpg">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/vendor/fa/all.min.css">
     <link rel="stylesheet" href="static/css/sourcecodepro.css">
     <script src="static/js/index.js"></script>
-    <script src="static/js/graph.js"></script>
 </head>
 <body class="m-0 p-0 bg-dark-bg">
 
 <div id="scroll-progress"></div>
 
 <header class="fixed w-full h-[50px] pt-[5px] top-0 flex justify-end items-center bg-[rgba(150,150,150,0.25)] backdrop-blur-sm shadow-md z-[1000]">
-    <nav class="mr-[2%]">
-        <a href="#" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">HOME</a>
-        <a href="#about" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">ABOUT</a>
-        <a href="#timeline" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">TIMELINE</a>
-        <a href="#skills" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">SKILLS</a>
-        <a href="#cv" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">CV</a>
+    <nav class="mr-[2%] flex">
+        <a href="#" class="nav-link hidden sm:inline">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#timeline" class="nav-link hidden sm:inline">TIMELINE</a>
+        <a href="#expertise" class="nav-link">EXPERTISE</a>
+        <a href="#publications" class="nav-link">PAPERS</a>
+        <a href="#cv" class="nav-link">CV</a>
     </nav>
 </header>
 
@@ -40,14 +41,14 @@
         <div id="landing-content" class="mt-[calc(0.15*var(--landing-height))] flex flex-col items-center">
             <div>
                 <h2 class="font-mono font-normal text-white text-[40px] sm:text-[55px] md:text-[75px]">Yannick Sautter</h2>
-                <p class="text-white font-sans text-[20px] sm:text-[28px] md:text-[35px]"><span class="typewrite" data-period="2000" data-type='[ "Software Engineer", "Cybersecurity Enthusiast", "Hobby Musician", "Arch User (btw)" ]'></span></p>
+                <p class="text-white font-sans text-[20px] sm:text-[28px] md:text-[35px]"><span class="typewrite" data-period="2000" data-type='[ "Software Engineer", "Development Director", "Security Researcher", "Hobby Musician", "Arch User (btw)" ]'></span></p>
             </div>
             <div id="landing-links" class="mt-[4%] rounded-xl w-[80%] sm:w-[50%] md:w-[35%] h-10 flex justify-evenly items-center text-[24px] sm:text-[28px] md:text-[30px] text-white">
-                <a href="https://github.com/ysautter" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://leetcode.com/u/ysautter/" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/leetcode-svgrepo-com.svg" alt="icon" width="27" height="27"></a>
-                <a href="https://app.hackthebox.com/profile/811472" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/hackthebox-svgrepo-com.svg" alt="icon" width="25" height="25"></a>
-                <a href="https://soundcloud.com/yannick-sautter" target="_blank" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/soundcloud-svgrepo-com.svg" alt="icon" width="40" height="40"></a>
+                <a href="https://github.com/ysautter" target="_blank" rel="noopener" aria-label="GitHub" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://leetcode.com/u/ysautter/" target="_blank" rel="noopener" aria-label="LeetCode" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/leetcode-svgrepo-com.svg" alt="LeetCode" width="27" height="27"></a>
+                <a href="https://app.hackthebox.com/profile/811472" target="_blank" rel="noopener" aria-label="Hack The Box" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/hackthebox-svgrepo-com.svg" alt="Hack The Box" width="25" height="25"></a>
+                <a href="https://soundcloud.com/yannick-sautter" target="_blank" rel="noopener" aria-label="SoundCloud" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/soundcloud-svgrepo-com.svg" alt="SoundCloud" width="40" height="40"></a>
             </div>
         </div>
     </section>
@@ -56,9 +57,11 @@
         <div id="about-content" class="reveal mt-16 mb-8 text-[20px] sm:text-[24px] md:text-[27px] w-[90%] sm:w-[80%] md:w-[max(56rem,66%)] px-4 md:px-0">
             <span>Hey, thanks for stopping by!</span>
             <br><br>
-            <span>My name is Yannick Sautter.<br> I have a passion for tinkering with software, especially I love enhancing my workflow in Linux. <br> During my studies, I focused on Cybersecurity and Machine Learning. </span>
+            <span>My name is Yannick Sautter.<br> I lead the development of <span class="text-accent">groupios</span>, a secure multi-tenant e-mail and groupware platform, at step3IT. Besides building the product, I take care of the infrastructure it runs on, how we monitor and secure it, and the development process around it.</span>
             <br><br>
-            <span> For more information checkout my resumé or for a quick overview see the timeline below.</span>
+            <span>During my studies I focused on Cybersecurity and Machine Learning. Some of that research has been published at ARES and ESORICS. I also love tinkering with software, especially to improve my own Linux workflow.</span>
+            <br><br>
+            <span>Take a look at my resumé, or check the timeline below for a quick overview.</span>
         </div>
         <div id="timeline" class="mt-8 mb-8 p-4 md:p-8 text-white bg-dark-section w-full">
             <h1 class="text-center reveal mb-12">Timeline</h1>
@@ -68,75 +71,156 @@
                     <div class="timeline-card">
                         <span class="timeline-date">2014</span>
                         <div class="timeline-title">Abitur, Max-Planck-Gymnasium Saarlouis</div>
-                        <div class="timeline-descr">I completed my university entrance qualification with computer science as one of my exam subjects because I was able to choose and study it starting from the 10th grade.</div>
+                        <div class="timeline-descr">I finished school with computer science as one of my exam subjects. I could choose it from 10th grade on.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#205781">
                     <div class="timeline-card">
                         <span class="timeline-date">2015</span>
                         <div class="timeline-title">Working Holiday, New Zealand</div>
-                        <div class="timeline-descr">After high school I went nine months abroad to New Zealand, where I had a "Working Holiday" visa. On the way back I stayed two months in South-East Asia.</div>
+                        <div class="timeline-descr">After school I spent nine months in New Zealand on a "Working Holiday" visa. On the way back I stayed two months in South-East Asia.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#98D2C0">
                     <div class="timeline-card">
                         <span class="timeline-date">2016</span>
                         <div class="timeline-title">Technical Support, Arvato</div>
-                        <div class="timeline-descr">To fill the time between my travels and the start of my first bachelor semester I worked for Arvato, a service provider for the German internet and telecommunication provider O2.</div>
+                        <div class="timeline-descr">Between my travels and my first semester I worked for Arvato, a service provider for the German internet and telecommunications provider O2.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#6B7AA1">
                     <div class="timeline-card">
                         <span class="timeline-date">2019</span>
                         <div class="timeline-title">Software Engineer, Freelancer</div>
-                        <div class="timeline-descr">During my bachelor studies I started working as freelancing software engineer.</div>
+                        <div class="timeline-descr">During my bachelor studies I started working as a freelance software engineer, building management interfaces for firewall systems.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#27548A">
                     <div class="timeline-card">
                         <span class="timeline-date">2020</span>
                         <div class="timeline-title">Computer Science Bachelor, Universität des Saarlandes</div>
-                        <div class="timeline-descr">I finished my bachelor degree with the bachelor thesis "Backdoor attacks against Generative Models and Autoencoders". You can find the results <a href="https://arxiv.org/abs/2010.03007" target="_blank" class="no-underline text-accent">here</a>.</div>
+                        <div class="timeline-descr">My bachelor thesis was "Backdoor attacks against Generative Models and Autoencoders". The results are on <a href="https://arxiv.org/abs/2010.03007" target="_blank" rel="noopener" class="no-underline text-accent">arXiv</a>.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#1B5F8C">
                     <div class="timeline-card">
                         <span class="timeline-date">2020</span>
                         <div class="timeline-title">Software Engineer, Tuxguard GmbH</div>
-                        <div class="timeline-descr">I developed functionalities on various systems such as Firewalls, Antivirus Endpoints and Mail Transfer Agents.</div>
+                        <div class="timeline-descr">I built features for firewalls, antivirus endpoints and mail transfer agents.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#4CADAD">
                     <div class="timeline-card">
+                        <span class="timeline-date">2021</span>
+                        <div class="timeline-title">Licensing Infrastructure, Tuxguard GmbH</div>
+                        <div class="timeline-descr">I designed and implemented the software licensing mechanism for our products, including both the license server and the client.</div>
+                    </div>
+                </li>
+                <li class="timeline-item" style="--accent-color:#205781">
+                    <div class="timeline-card">
                         <span class="timeline-date">2024</span>
                         <div class="timeline-title">Computer Science Master, RWTH Aachen</div>
-                        <div class="timeline-descr">My master studies had a strong focus on Cybersecurity and Machine Learning. I completed my master degree with the thesis "Internationalizing DGA Detection". We are currently in the process of publishing the results.</div>
+                        <div class="timeline-descr">My master studies focused on Cybersecurity and Machine Learning. My thesis was "Internationalizing DGA Detection", which was later published at ESORICS 2026.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#3E5879">
                     <div class="timeline-card">
                         <span class="timeline-date">2024 - 2025</span>
                         <div class="timeline-title">Development Director, Tuxguard GmbH</div>
-                        <div class="timeline-descr">I lead the development of groupios. A comprehensive and secure multinenancy groupware solution.</div>
+                        <div class="timeline-descr">I led the development of groupios, a secure multi-tenant groupware solution, and moved it to a scalable manager/worker architecture.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#6B7AA1">
                     <div class="timeline-card">
                         <span class="timeline-date">2025 - Current</span>
                         <div class="timeline-title">Development Director, step3IT GmbH</div>
-                        <div class="timeline-descr">After the acquisition of groupios by step3IT I continue to lead the development there.</div>
+                        <div class="timeline-descr">After step3IT acquired groupios, I continued to lead its development there. We are currently turning it into a hosted SaaS offering.</div>
+                    </div>
+                </li>
+                <li class="timeline-item" style="--accent-color:#1B5F8C">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2026</span>
+                        <div class="timeline-title">Security &amp; Compliance, step3IT GmbH</div>
+                        <div class="timeline-descr">I set up a SIEM and SBOM-based vulnerability tracking for the whole Docker fleet, helped implement the ISMS (ISO 27001 &amp; ISO 9001), and took responsibility for the software development process.</div>
+                    </div>
+                </li>
+                <li class="timeline-item" style="--accent-color:#4CADAD">
+                    <div class="timeline-card">
+                        <span class="timeline-date">2026</span>
+                        <div class="timeline-title">Papers at ARES &amp; ESORICS</div>
+                        <div class="timeline-descr">Two papers on DGA detection that I co-authored with RWTH Aachen were published: one at <a href="#publications" class="no-underline text-accent">ARES 2026</a> in Linköping and one at <a href="#publications" class="no-underline text-accent">ESORICS 2026</a> in Rome.</div>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
 
-    <section id="skills" class="py-16 w-full bg-dark-bg flex flex-col items-center text-white">
-        <h1 class="text-center text-2xl mb-12 font-mono reveal">Skills</h1>
-        <div class="w-[90%] max-w-[1100px]">
-            <div id="metro-map" class="metro-map reveal"></div>
-            <p class="text-sm text-gray-400 mt-8 reveal">Languages: German · English · French</p>
+    <section id="expertise" class="py-16 w-full bg-dark-bg flex flex-col items-center text-white">
+        <h1 class="text-center text-2xl mb-4 font-mono reveal">Expertise</h1>
+        <p class="text-center text-gray-300 font-sans mb-12 px-4 max-w-[46rem] reveal">This is what I actually do day to day, not a list of every tool I have touched once.</p>
+        <div class="expertise-grid w-[90%] max-w-[1100px]">
+            <article class="expertise-card reveal" style="--card-color:#4CADAD">
+                <div class="expertise-head"><i class="fa-solid fa-envelopes-bulk"></i><h2>Secure E-Mail &amp; Groupware</h2></div>
+                <p>I lead a multi-tenant mail gateway and groupware platform, from SMTP filtering and encryption to SSO and the admin UI. It runs on-premises and as SaaS.</p>
+                <ul class="chips"><li>Haraka</li><li>Rspamd</li><li>Kopano</li><li>CipherMail</li><li>Keycloak</li><li>OpenLDAP</li><li>SPF/DKIM/DMARC</li><li>DANE</li></ul>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#c9953c">
+                <div class="expertise-head"><i class="fa-solid fa-shield-halved"></i><h2>Security Operations</h2></div>
+                <p>I monitor a fleet of ~270 containers with a SIEM, track vulnerabilities through SBOMs, and triage CVEs. When a critical one appears, I coordinate the response.</p>
+                <ul class="chips"><li>Wazuh</li><li>Dependency-Track</li><li>CycloneDX SBOM</li><li>VEX</li><li>gitleaks</li><li>fail2ban</li><li>OPNsense</li></ul>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#84b3dc">
+                <div class="expertise-head"><i class="fa-solid fa-clipboard-check"></i><h2>Process &amp; Compliance</h2></div>
+                <p>I own the software development process: work item and MR templates, dev/qa/rc branching, mandatory reviews, and CI/CD that enforces it all. I also helped implement the ISMS.</p>
+                <ul class="chips"><li>ISO 27001</li><li>ISO 9001</li><li>GitLab CI/CD</li><li>Release Management</li><li>KPIs</li><li>Code Review</li></ul>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#16a34a">
+                <div class="expertise-head"><i class="fa-solid fa-server"></i><h2>Infrastructure</h2></div>
+                <p>I built and run the company's self-hosted IT: Git, registry, chat, file sharing, SSO, password management, push notifications and monitoring, all as Docker stacks.</p>
+                <ul class="chips"><li>Linux</li><li>Docker</li><li>Nginx</li><li>GitLab</li><li>Matrix/Element</li><li>Nextcloud</li><li>Prometheus</li><li>Grafana</li><li>Tailscale</li></ul>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#a78bfa">
+                <div class="expertise-head"><i class="fa-solid fa-code"></i><h2>Software Engineering</h2></div>
+                <p>I work across backend APIs, web UIs, desktop clients and licensing systems, mostly in Python and Go, with JavaScript/TypeScript on the frontend.</p>
+                <ul class="chips"><li>Python</li><li>Go</li><li>TypeScript</li><li>C#</li><li>Django</li><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>Redis</li><li>RabbitMQ</li></ul>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#f472b6">
+                <div class="expertise-head"><i class="fa-solid fa-brain"></i><h2>ML for Security</h2></div>
+                <p>My research is on adversarial robustness and bias in ML-based detection: backdoors in generative models, and evading DGA classifiers with internationalized domains.</p>
+                <ul class="chips"><li>PyTorch</li><li>Transformers</li><li>DGA Detection</li><li>Adversarial ML</li><li>LaTeX</li></ul>
+            </article>
         </div>
+        <p class="text-sm text-gray-400 mt-10 font-sans reveal">Languages: German (native) · English · French</p>
+    </section>
+
+    <section id="publications" class="py-16 w-full bg-dark-section flex flex-col items-center text-white">
+        <h1 class="text-center text-2xl mb-12 font-mono reveal">Publications</h1>
+        <ul class="w-[90%] max-w-[900px] list-none p-0 m-0 flex flex-col gap-6 font-sans">
+            <li class="pub reveal">
+                <span class="pub-venue">ESORICS 2026</span>
+                <div class="pub-title">Internationalizing DGA Detection</div>
+                <div class="pub-authors">Arthur Drichel, <strong>Yannick Sautter</strong>, Ulrike Meyer</div>
+                <div class="pub-meta">European Symposium on Research in Computer Security, Rome · LNCS 16968, pp. 145–165</div>
+                <p class="pub-descr">We show that internationalized domain names let DGAs evade state-of-the-art classifiers about 98% of the time, and we propose a language-balanced training procedure to counter this.</p>
+                <a href="https://doi.org/10.1007/978-3-032-38692-2_8" target="_blank" rel="noopener" class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> DOI</a>
+            </li>
+            <li class="pub reveal">
+                <span class="pub-venue">ARES 2026</span>
+                <div class="pub-title">DomainBERT: Transformer-based Domain Generation Algorithm Detection</div>
+                <div class="pub-authors">Arthur Drichel, <strong>Yannick Sautter</strong>, Ulrike Meyer</div>
+                <div class="pub-meta">International Conference on Availability, Reliability and Security, Linköping · short paper</div>
+                <p class="pub-descr">A transformer-based DGA classifier that outperforms the state of the art in a bias-reduced setting: +11.23% ROC AUC for FPR ≤ 0.01 and +13.98% TPR at an FPR of 0.0014.</p>
+                <a href="https://www.ares-conference.eu/conference/program" target="_blank" rel="noopener" class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Program</a>
+            </li>
+            <li class="pub reveal">
+                <span class="pub-venue">arXiv 2020</span>
+                <div class="pub-title">BAAAN: Backdoor Attacks Against Autoencoder and GAN-Based Machine Learning Models</div>
+                <div class="pub-authors">Ahmed Salem, <strong>Yannick Sautter</strong>, Michael Backes, Mathias Humbert, Yang Zhang</div>
+                <div class="pub-meta">Preprint, based on my bachelor thesis</div>
+                <p class="pub-descr">Extends backdoor attacks from classifiers to autoencoders and GANs. A hidden trigger makes the model produce attacker-chosen output while it keeps behaving normally otherwise.</p>
+                <a href="https://arxiv.org/abs/2010.03007" target="_blank" rel="noopener" class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> arXiv</a>
+            </li>
+        </ul>
     </section>
 
     <section id="cv" class="pt-12 pb-12 w-full flex flex-col items-center justify-center bg-cv-bg text-white overflow-x-auto">
@@ -156,7 +240,7 @@
                     <ul class="list-none p-0 m-0">
                         <li class="py-[0.2rem]"><a href="mailto:contact@sautter.dev" class="no-underline text-inherit"><i class="fa-solid fa-envelope w-[23px] text-center"></i> contact@sautter.dev</a></li>
                         <li class="py-[0.2rem]"><i class="fa-solid fa-location-dot w-[23px] text-center"></i> Köln, NRW</li>
-                        <li class="py-[0.2rem]"><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank" class="no-underline text-inherit"><i class="fa-brands fa-linkedin w-[23px] text-center"></i> yannick-sautter</a></li>
+                        <li class="py-[0.2rem]"><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank" rel="noopener" class="no-underline text-inherit"><i class="fa-brands fa-linkedin w-[23px] text-center"></i> yannick-sautter</a></li>
                     </ul>
                 </div>
                 <div id="cv-education" class="m-8">
@@ -187,7 +271,7 @@
                     <h2 class="mt-4 mb-2 text-[17px]">Programming</h2>
                     <ul class="list-disc pl-[19px]">
                         <li class="mb-[0.2rem] text-[15px]">Python</li>
-                        <li class="mb-[0.2rem] text-[15px]">JavaScript</li>
+                        <li class="mb-[0.2rem] text-[15px]">JavaScript / TypeScript</li>
                         <li class="mb-[0.2rem] text-[15px]">HTML/CSS</li>
                         <li class="mb-[0.2rem] text-[15px]">Java</li>
                         <li class="mb-[0.2rem] text-[15px]">Bash</li>
@@ -207,6 +291,7 @@
                         <li class="mb-[0.2rem] text-[15px]">Django</li>
                         <li class="mb-[0.2rem] text-[15px]">FastAPI</li>
                         <li class="mb-[0.2rem] text-[15px]">Express</li>
+                        <li class="mb-[0.2rem] text-[15px]">React</li>
                         <li class="mb-[0.2rem] text-[15px]">Bootstrap</li>
                         <li class="mb-[0.2rem] text-[15px]">Haraka</li>
                         <li class="mb-[0.2rem] text-[15px]">.NET</li>
@@ -222,6 +307,9 @@
                         <li class="mb-[0.2rem] text-[15px]">Redis</li>
                         <li class="mb-[0.2rem] text-[15px]">RabbitMQ</li>
                         <li class="mb-[0.2rem] text-[15px]">WiX Installer</li>
+                        <li class="mb-[0.2rem] text-[15px]">GitLab CI/CD</li>
+                        <li class="mb-[0.2rem] text-[15px]">Wazuh SIEM</li>
+                        <li class="mb-[0.2rem] text-[15px]">Dependency-Track</li>
                     </ul>
                     <h2 class="mt-4 mb-2 text-[17px]">Operating Systems</h2>
                     <ul class="list-disc pl-[19px]">
@@ -253,7 +341,12 @@
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
-                                <li class="mb-1">Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
+                                <li class="mb-1">Leading development of the on-premises and SaaS multi-tenant e-mail server, gateway and groupware groupios.</li>
+                                <li class="mb-1">Building groupios as a hosted SaaS offering (in progress).</li>
+                                <li class="mb-1">Responsible for the software development process, and implemented the CI/CD that enforces it (dev/qa/rc branching, reviews, release promotion, secret scanning).</li>
+                                <li class="mb-1">Set up a Wazuh SIEM, SBOM generation and Dependency-Track vulnerability tracking with KPIs for all Docker services.</li>
+                                <li class="mb-1">Helped implement the ISMS according to ISO 27001 and ISO 9001.</li>
+                                <li class="mb-1">Set up and run the internal IT infrastructure (GitLab, registry, Matrix/Element, Nextcloud, ntfy, SSO, password management, monitoring).</li>
                             </ul>
                         </li>
                         <li class="mb-7">
@@ -268,7 +361,9 @@
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
-                                <li class="mb-1">Leading development of on-premises installable multitenancy e-mail server and gateway.</li>
+                                <li class="mb-1">Led development of the on-premises multi-tenant e-mail server and gateway.</li>
+                                <li class="mb-1">Redesigned the platform into a horizontally scalable manager/worker architecture.</li>
+                                <li class="mb-1">Set up the internal IT infrastructure (chat, file sharing, push notifications, SSO, custom services).</li>
                             </ul>
                         </li>
                         <li class="mb-7">
@@ -283,7 +378,7 @@
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
-                                <li class="mb-1">Developed and implemented highly distributable software license infrastructure for antivirus endpoints.</li>
+                                <li class="mb-1">Designed and implemented the software licensing mechanism (license server and client) and a highly distributable license infrastructure for antivirus endpoints.</li>
                                 <li class="mb-1">Developed and implemented on-premises installable management server for antivirus endpoints.</li>
                                 <li class="mb-1">Developed and implemented plugins for OPNsense.</li>
                                 <li class="mb-1">Technical Support for the products</li>
@@ -364,6 +459,14 @@
                                 <li class="mb-1">Assisted in populating and managing data within the CMS to ensure accuracy and completeness.</li>
                             </ul>
                         </li>
+                    </ul>
+                </div>
+                <div id="cv-publications" class="m-8">
+                    <h1 class="border-b border-current mt-4 mb-4 text-[22px] uppercase font-serif">Publications</h1>
+                    <ul class="list-disc pl-[19px]">
+                        <li class="mb-2">A. Drichel, <b>Y. Sautter</b>, U. Meyer. <i>Internationalizing DGA Detection.</i> ESORICS 2026.</li>
+                        <li class="mb-2">A. Drichel, <b>Y. Sautter</b>, U. Meyer. <i>DomainBERT: Transformer-based Domain Generation Algorithm Detection.</i> ARES 2026.</li>
+                        <li class="mb-2">A. Salem, <b>Y. Sautter</b>, M. Backes, M. Humbert, Y. Zhang. <i>BAAAN: Backdoor Attacks Against Autoencoder and GAN-Based Machine Learning Models.</i> arXiv 2020.</li>
                     </ul>
                 </div>
             </div>
