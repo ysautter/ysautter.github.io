@@ -9,15 +9,67 @@
     <link rel="canonical" href="https://sautter.dev/">
     <meta property="og:title" content="Yannick Sautter — Software Engineer">
     <meta property="og:description" content="Software engineer working on secure e-mail and groupware, security operations and ML-based threat detection. Based in Köln, Germany.">
-    <meta property="og:image" content="https://sautter.dev/static/img/yannick.jpg">
+    <meta property="og:image" content="https://sautter.dev/static/img/og.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sautter.dev/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yannick Sautter — Software Engineer">
     <meta name="twitter:description" content="Software engineer working on secure e-mail and groupware, security operations and ML-based threat detection. Based in Köln, Germany.">
-    <meta name="twitter:image" content="https://sautter.dev/static/img/yannick.jpg">
+    <meta name="twitter:image" content="https://sautter.dev/static/img/og.jpg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yannick Sautter",
+      "url": "https://sautter.dev/",
+      "image": "https://sautter.dev/static/img/og.jpg",
+      "jobTitle": "Development Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "step3IT GmbH"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Köln",
+        "addressCountry": "DE"
+      },
+      "email": "mailto:contact@sautter.dev",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "RWTH Aachen University"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universität des Saarlandes"
+        }
+      ],
+      "knowsLanguage": [
+        "de",
+        "en",
+        "fr",
+        "es"
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "Machine Learning",
+        "E-Mail Security",
+        "Security Operations",
+        "DGA Detection",
+        "Software Engineering"
+      ],
+      "sameAs": [
+        "https://github.com/ysautter",
+        "https://www.linkedin.com/in/yannick-sautter/",
+        "https://soundcloud.com/yannick-sautter"
+      ]
+    }
+    </script>
+    <link rel="preload" as="image" href="static/img/yannick-1920.webp" type="image/webp">
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/vendor/fa/all.min.css">
     <link rel="stylesheet" href="static/css/sourcecodepro.css">
     <script src="static/js/index.js"></script>
 </head>
@@ -27,25 +79,26 @@
 
 <header class="fixed w-full h-[50px] pt-[5px] top-0 flex justify-end items-center bg-[rgba(150,150,150,0.25)] backdrop-blur-sm shadow-md z-[1000]">
     <nav class="mr-[2%] flex">
-        <a href="#" class="nav-link hidden sm:inline">HOME</a>
+        <a href="#" class="nav-link hidden lg:inline">HOME</a>
         <a href="#about" class="nav-link">ABOUT</a>
-        <a href="#timeline" class="nav-link hidden sm:inline">TIMELINE</a>
-        <a href="#expertise" class="nav-link">EXPERTISE</a>
+        <a href="#timeline" class="nav-link hidden md:inline">TIMELINE</a>
+        <a href="#expertise" class="nav-link hidden sm:inline">EXPERTISE</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
         <a href="#publications" class="nav-link">PAPERS</a>
         <a href="#cv" class="nav-link">CV</a>
     </nav>
 </header>
 
 <main>
-    <section id="landing" class="m-0 p-0 w-screen h-screen max-h-[1600px] bg-cover bg-center flex justify-center text-center" style="background-image: url('static/img/yannick.jpg'); --landing-height: 100vh;">
+    <section id="landing" class="m-0 p-0 w-screen h-screen max-h-[1600px] bg-cover bg-center flex justify-center text-center" style="--landing-height: 100vh;">
         <div id="landing-content" class="mt-[calc(0.15*var(--landing-height))] flex flex-col items-center">
             <div>
                 <h2 class="font-mono font-normal text-white text-[40px] sm:text-[55px] md:text-[75px]">Yannick Sautter</h2>
                 <p class="text-white font-sans text-[20px] sm:text-[28px] md:text-[35px]"><span class="typewrite" data-period="2000" data-type='[ "Software Engineer", "Development Director", "Security Researcher", "Hobby Musician", "Arch User (btw)" ]'></span></p>
             </div>
             <div id="landing-links" class="mt-[4%] rounded-xl w-[80%] sm:w-[50%] md:w-[35%] h-10 flex justify-evenly items-center text-[24px] sm:text-[28px] md:text-[30px] text-white">
-                <a href="https://github.com/ysautter" target="_blank" rel="noopener" aria-label="GitHub" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-inherit transition-opacity duration-300 hover:opacity-60"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ysautter" target="_blank" rel="noopener" aria-label="GitHub" class="text-inherit transition-opacity duration-300 hover:opacity-60"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#github"></use></svg></a>
+                <a href="https://www.linkedin.com/in/yannick-sautter/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-inherit transition-opacity duration-300 hover:opacity-60"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#linkedin"></use></svg></a>
                 <a href="https://leetcode.com/u/ysautter/" target="_blank" rel="noopener" aria-label="LeetCode" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/leetcode-svgrepo-com.svg" alt="LeetCode" width="27" height="27"></a>
                 <a href="https://app.hackthebox.com/profile/811472" target="_blank" rel="noopener" aria-label="Hack The Box" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/hackthebox-svgrepo-com.svg" alt="Hack The Box" width="25" height="25"></a>
                 <a href="https://soundcloud.com/yannick-sautter" target="_blank" rel="noopener" aria-label="SoundCloud" class="text-inherit transition-opacity duration-300 hover:opacity-60"><img src="static/css/vendor/icons/soundcloud-svgrepo-com.svg" alt="SoundCloud" width="40" height="40"></a>
@@ -57,7 +110,7 @@
         <div id="about-content" class="reveal mt-16 mb-8 text-[20px] sm:text-[24px] md:text-[27px] w-[90%] sm:w-[80%] md:w-[max(56rem,66%)] px-4 md:px-0">
             <span>Hey, thanks for stopping by!</span>
             <br><br>
-            <span>My name is Yannick Sautter.<br> I lead the development of <span class="text-accent">groupios</span>, a secure multi-tenant e-mail and groupware platform, at step3IT. Besides building the product, I take care of the infrastructure it runs on, how we monitor and secure it, and the development process around it.</span>
+            <span>My name is Yannick Sautter.<br> I lead the development of <a href="https://groupios.com" target="_blank" rel="noopener" class="text-accent brand-font">groupios</a>, a secure multi-tenant e-mail and groupware platform, at step3IT. Besides building the product, I take care of the infrastructure it runs on, how we monitor and secure it, and the development process around it.</span>
             <br><br>
             <span>During my studies I focused on Cybersecurity and Machine Learning. Some of that research has been published at ARES and ESORICS. I also love tinkering with software, especially to improve my own Linux workflow.</span>
             <br><br>
@@ -120,14 +173,14 @@
                     <div class="timeline-card">
                         <span class="timeline-date">2024 - 2025</span>
                         <div class="timeline-title">Development Director, Tuxguard GmbH</div>
-                        <div class="timeline-descr">I led the development of groupios, a secure multi-tenant groupware solution, and moved it to a scalable manager/worker architecture.</div>
+                        <div class="timeline-descr">I led the development of <a href="https://groupios.com" target="_blank" rel="noopener" class="brand-font">groupios</a>, a secure multi-tenant groupware solution, and moved it to a scalable manager/worker architecture.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#6B7AA1">
                     <div class="timeline-card">
                         <span class="timeline-date">2025 - Current</span>
                         <div class="timeline-title">Development Director, step3IT GmbH</div>
-                        <div class="timeline-descr">After step3IT acquired groupios, I continued to lead its development there. We are currently turning it into a hosted SaaS offering.</div>
+                        <div class="timeline-descr">After step3IT acquired <a href="https://groupios.com" target="_blank" rel="noopener" class="brand-font">groupios</a>, I continued to lead its development there. We are currently turning it into a hosted SaaS offering.</div>
                     </div>
                 </li>
                 <li class="timeline-item" style="--accent-color:#1B5F8C">
@@ -153,32 +206,32 @@
         <p class="text-center text-gray-300 font-sans mb-12 px-4 max-w-[46rem] reveal">This is what I actually do day to day, not a list of every tool I have touched once.</p>
         <div class="expertise-grid w-[90%] max-w-[1100px]">
             <article class="expertise-card reveal" style="--card-color:#4CADAD">
-                <div class="expertise-head"><i class="fa-solid fa-envelopes-bulk"></i><h2>Secure E-Mail &amp; Groupware</h2></div>
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#envelopes-bulk"></use></svg><h2>Secure E-Mail &amp; Groupware</h2></div>
                 <p>I lead a multi-tenant mail gateway and groupware platform, from SMTP filtering and encryption to SSO and the admin UI. It runs on-premises and as SaaS.</p>
                 <ul class="chips"><li>Haraka</li><li>Rspamd</li><li>Kopano</li><li>CipherMail</li><li>Keycloak</li><li>OpenLDAP</li><li>SPF/DKIM/DMARC</li><li>DANE</li></ul>
             </article>
             <article class="expertise-card reveal" style="--card-color:#c9953c">
-                <div class="expertise-head"><i class="fa-solid fa-shield-halved"></i><h2>Security Operations</h2></div>
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#shield-halved"></use></svg><h2>Security Operations</h2></div>
                 <p>I monitor a fleet of ~270 containers with a SIEM, track vulnerabilities through SBOMs, and triage CVEs. When a critical one appears, I coordinate the response.</p>
                 <ul class="chips"><li>Wazuh</li><li>Dependency-Track</li><li>CycloneDX SBOM</li><li>VEX</li><li>gitleaks</li><li>fail2ban</li><li>OPNsense</li></ul>
             </article>
             <article class="expertise-card reveal" style="--card-color:#84b3dc">
-                <div class="expertise-head"><i class="fa-solid fa-clipboard-check"></i><h2>Process &amp; Compliance</h2></div>
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#clipboard-check"></use></svg><h2>Process &amp; Compliance</h2></div>
                 <p>I own the software development process: work item and MR templates, dev/qa/rc branching, mandatory reviews, and CI/CD that enforces it all. I also helped implement the ISMS.</p>
                 <ul class="chips"><li>ISO 27001</li><li>ISO 9001</li><li>GitLab CI/CD</li><li>Release Management</li><li>KPIs</li><li>Code Review</li></ul>
             </article>
             <article class="expertise-card reveal" style="--card-color:#16a34a">
-                <div class="expertise-head"><i class="fa-solid fa-server"></i><h2>Infrastructure</h2></div>
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#server"></use></svg><h2>Infrastructure</h2></div>
                 <p>Since 2021 I have built and run the company's self-hosted IT as Docker stacks, first at Tuxguard and now at step3IT. It covers Git, registry, chat, file sharing, SSO, password management, push notifications and monitoring, and it has grown and been migrated several times.</p>
                 <ul class="chips"><li>Linux</li><li>Docker</li><li>Nginx</li><li>GitLab</li><li>Matrix/Element</li><li>Nextcloud</li><li>Prometheus</li><li>Grafana</li><li>Tailscale</li></ul>
             </article>
             <article class="expertise-card reveal" style="--card-color:#a78bfa">
-                <div class="expertise-head"><i class="fa-solid fa-code"></i><h2>Software Engineering</h2></div>
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#code"></use></svg><h2>Software Engineering</h2></div>
                 <p>I work across backend APIs, web UIs, desktop clients and licensing systems, mostly in Python and Go, with JavaScript/TypeScript on the frontend.</p>
                 <ul class="chips"><li>Python</li><li>Go</li><li>TypeScript</li><li>C#</li><li>Django</li><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>Redis</li><li>RabbitMQ</li></ul>
             </article>
             <article class="expertise-card reveal" style="--card-color:#f472b6">
-                <div class="expertise-head"><i class="fa-solid fa-brain"></i><h2>ML for Security</h2></div>
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#brain"></use></svg><h2>ML for Security</h2></div>
                 <p>My research is on adversarial robustness and bias in ML-based detection: backdoors in generative models, and evading DGA classifiers with internationalized domains.</p>
                 <ul class="chips"><li>PyTorch</li><li>Transformers</li><li>DGA Detection</li><li>Adversarial ML</li><li>LaTeX</li></ul>
             </article>
@@ -186,7 +239,30 @@
         <p class="text-sm text-gray-400 mt-10 font-sans reveal">Languages: German (native) · English · French · Spanish</p>
     </section>
 
-    <section id="publications" class="py-16 w-full bg-dark-section flex flex-col items-center text-white">
+    <section id="projects" class="py-16 w-full bg-dark-section flex flex-col items-center text-white">
+        <h1 class="text-center text-2xl mb-4 font-mono reveal">Side Projects</h1>
+        <p class="text-center text-gray-300 font-sans mb-12 px-4 max-w-[46rem] reveal">These are things I build in my spare time. All of them run in production on my own server.</p>
+        <div class="expertise-grid w-[90%] max-w-[1100px]">
+            <article class="expertise-card reveal" style="--card-color:#f472b6">
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#music"></use></svg><h2>das Ohr: Music School Management</h2></div>
+                <p>A management app for a music school with about a dozen freelance teachers, replacing their Excel sheets. Teachers manage students and contracts, record the lessons they held, and generate their monthly invoice as a PDF. Admins maintain versioned price lists and approve invoices. It's an installable, mobile-first PWA in German and English.</p>
+                <ul class="chips"><li>Django</li><li>Django Ninja</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>PWA</li><li>Docker</li></ul>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#c9953c">
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#globe"></use></svg><h2>Website for a Piano Teacher</h2></div>
+                <p>A one-page website for a piano teacher in Köln, with an animated 3D keyboard in the header and a contact form backed by a real API. Texts can be edited without a rebuild, and online lesson booking is already modelled in the database and API.</p>
+                <ul class="chips"><li>React</li><li>three.js</li><li>Express</li><li>PostgreSQL</li><li>Docker</li></ul>
+                <a href="https://nora-dreyer.de" target="_blank" rel="noopener" class="pub-link"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#arrow-up-right-from-square"></use></svg> nora-dreyer.de</a>
+            </article>
+            <article class="expertise-card reveal" style="--card-color:#16a34a">
+                <div class="expertise-head"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#network-wired"></use></svg><h2>Self-Hosted Server</h2></div>
+                <p>My own server runs my mail (Stalwart), a self-hosted Tailscale control plane (Headscale), DNS filtering and all of the projects above, this website included. An SNI router lets the mail server keep its own TLS, while everything else goes through nginx-proxy with automatic certificates. Custom fail2ban rules are reviewed regularly against real attack traffic.</p>
+                <ul class="chips"><li>Stalwart</li><li>Nginx</li><li>Let's Encrypt</li><li>Headscale</li><li>Pi-hole</li><li>fail2ban</li><li>Docker</li></ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="publications" class="py-16 w-full bg-dark-bg flex flex-col items-center text-white">
         <h1 class="text-center text-2xl mb-12 font-mono reveal">Publications</h1>
         <ul class="w-[90%] max-w-[900px] list-none p-0 m-0 flex flex-col gap-6 font-sans">
             <li class="pub reveal">
@@ -195,7 +271,7 @@
                 <div class="pub-authors">Arthur Drichel, <strong>Yannick Sautter</strong>, Ulrike Meyer</div>
                 <div class="pub-meta">European Symposium on Research in Computer Security, Rome · LNCS 16968, pp. 145–165 · result of my master thesis</div>
                 <p class="pub-descr">We show that internationalized domain names let DGAs evade state-of-the-art classifiers about 98% of the time, and we propose a language-balanced training procedure to counter this.</p>
-                <a href="https://doi.org/10.1007/978-3-032-38692-2_8" target="_blank" rel="noopener" class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> DOI</a>
+                <a href="https://doi.org/10.1007/978-3-032-38692-2_8" target="_blank" rel="noopener" class="pub-link"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#arrow-up-right-from-square"></use></svg> DOI</a>
             </li>
             <li class="pub reveal">
                 <span class="pub-venue">ARES 2026</span>
@@ -203,7 +279,7 @@
                 <div class="pub-authors">Arthur Drichel, <strong>Yannick Sautter</strong>, Ulrike Meyer</div>
                 <div class="pub-meta">International Conference on Availability, Reliability and Security, Linköping · short paper · result of my master thesis</div>
                 <p class="pub-descr">A transformer-based DGA classifier that outperforms the state of the art in a bias-reduced setting: +11.23% ROC AUC for FPR ≤ 0.01 and +13.98% TPR at an FPR of 0.0014.</p>
-                <a href="https://www.ares-conference.eu/conference/program" target="_blank" rel="noopener" class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Program</a>
+                <a href="https://www.ares-conference.eu/conference/program" target="_blank" rel="noopener" class="pub-link"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#arrow-up-right-from-square"></use></svg> Program</a>
             </li>
             <li class="pub reveal">
                 <span class="pub-venue">arXiv 2020</span>
@@ -211,17 +287,18 @@
                 <div class="pub-authors">Ahmed Salem, <strong>Yannick Sautter</strong>, Michael Backes, Mathias Humbert, Yang Zhang</div>
                 <div class="pub-meta">Preprint, based on my bachelor thesis</div>
                 <p class="pub-descr">Extends backdoor attacks from classifiers to autoencoders and GANs. A hidden trigger makes the model produce attacker-chosen output while it keeps behaving normally otherwise.</p>
-                <a href="https://arxiv.org/abs/2010.03007" target="_blank" rel="noopener" class="pub-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> arXiv</a>
+                <a href="https://arxiv.org/abs/2010.03007" target="_blank" rel="noopener" class="pub-link"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#arrow-up-right-from-square"></use></svg> arXiv</a>
             </li>
         </ul>
     </section>
 
     <section id="cv" class="pt-12 pb-12 w-full flex flex-col items-center justify-center bg-cv-bg text-white overflow-x-auto">
-        <div id="buttons" class="w-[90%] md:w-[210mm] mb-4">
+        <div id="buttons" class="w-[90%] md:w-[210mm] mb-4 flex justify-between items-center">
             <div id="dark-mode-switch">
                 <input type="checkbox" id="darkModeToggle" checked>
-                <label for="darkModeToggle" id="switch"></label>
+                <label for="darkModeToggle" id="switch" aria-label="Toggle light/dark CV"></label>
             </div>
+            <a href="static/cv/Yannick_Sautter_CV.pdf" download class="cv-download"><svg class="icon" aria-hidden="true"><use href="static/img/icons.svg#file-arrow-down"></use></svg> Download PDF</a>
         </div>
         <div id="cv-content" class="reveal flex flex-col md:flex-row w-[95%] md:w-[210mm] min-h-[297mm] font-sans shadow-[2px_2px_19px_rgba(0,0,0,0.27)]">
             <div id="cv-left" class="w-full md:w-[36%]">
@@ -231,9 +308,9 @@
                 </div>
                 <div id="cv-contact" class="pt-4 pb-8 pl-8 text-white">
                     <ul class="list-none p-0 m-0">
-                        <li class="py-[0.2rem]"><a href="mailto:contact@sautter.dev" class="no-underline text-inherit"><i class="fa-solid fa-envelope w-[23px] text-center"></i> contact@sautter.dev</a></li>
-                        <li class="py-[0.2rem]"><i class="fa-solid fa-location-dot w-[23px] text-center"></i> Köln, NRW</li>
-                        <li class="py-[0.2rem]"><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank" rel="noopener" class="no-underline text-inherit"><i class="fa-brands fa-linkedin w-[23px] text-center"></i> yannick-sautter</a></li>
+                        <li class="py-[0.2rem]"><a href="mailto:contact@sautter.dev" class="no-underline text-inherit"><svg class="icon w-[23px] text-center" aria-hidden="true"><use href="static/img/icons.svg#envelope"></use></svg> contact@sautter.dev</a></li>
+                        <li class="py-[0.2rem]"><svg class="icon w-[23px] text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg> Köln, NRW</li>
+                        <li class="py-[0.2rem]"><a href="https://www.linkedin.com/in/yannick-sautter" target="_blank" rel="noopener" class="no-underline text-inherit"><svg class="icon w-[23px] text-center" aria-hidden="true"><use href="static/img/icons.svg#linkedin"></use></svg> yannick-sautter</a></li>
                     </ul>
                 </div>
                 <div id="cv-education" class="m-8">
@@ -244,8 +321,8 @@
                             <div class="mb-[0.3rem] italic">Computer Science</div>
                             <div class="mb-[0.3rem]">
                                 <div>RWTH Aachen</div>
-                                <div class="text-[13px]"><i class="fa-solid fa-location-dot text-gray-500"></i> Templergraben 55, 52056 Aachen</div>
-                                <div class="text-[13px]"><i class="fa-solid fa-calendar-days text-gray-500"></i> 2020 - 2024</div>
+                                <div class="text-[13px]"><svg class="icon text-gray-500" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg> Templergraben 55, 52056 Aachen</div>
+                                <div class="text-[13px]"><svg class="icon text-gray-500" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg> 2020 - 2024</div>
                             </div>
                         </li>
                         <li class="mb-6">
@@ -253,8 +330,8 @@
                             <div class="mb-[0.3rem] italic">Computer Science</div>
                             <div class="mb-[0.3rem]">
                                 <div>Universität des Saarlandes</div>
-                                <div class="text-[13px]"><i class="fa-solid fa-location-dot text-gray-500"></i> Campus, 66123 Saarbrücken</div>
-                                <div class="text-[13px]"><i class="fa-solid fa-calendar-days text-gray-500"></i> 2016 - 2020</div>
+                                <div class="text-[13px]"><svg class="icon text-gray-500" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg> Campus, 66123 Saarbrücken</div>
+                                <div class="text-[13px]"><svg class="icon text-gray-500" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg> 2016 - 2020</div>
                             </div>
                         </li>
                     </ul>
@@ -330,8 +407,8 @@
                                     <div>step3IT GmbH</div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2025 - current</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2025 - current</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>Remote</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -350,8 +427,8 @@
                                     <div>Tuxguard GmbH</div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2024 - 2025</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2024 - 2025</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>Remote</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -366,8 +443,8 @@
                                     <div>Tuxguard GmbH</div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2020 - 2024</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2020 - 2024</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>Remote</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -392,8 +469,8 @@
                                     <div>Freelancer</div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2019 - 2020</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Remote</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2019 - 2020</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>Remote</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -408,8 +485,8 @@
                                     <div>GiGroup/Arvato</div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2015 - 2016</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Eiweiler</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2015 - 2016</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>Eiweiler</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -428,8 +505,8 @@
                                     </div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2014 - 2015</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>New Zealand</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2014 - 2015</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>New Zealand</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -445,8 +522,8 @@
                                     <div>Net-Compass</div>
                                 </div>
                                 <div class="w-[125px]">
-                                    <div class="mb-2"><i class="fa-solid fa-calendar-days w-6 text-center"></i>2012</div>
-                                    <div><i class="fa-solid fa-location-dot w-6 text-center"></i>Lebach</div>
+                                    <div class="mb-2"><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#calendar-days"></use></svg>2012</div>
+                                    <div><svg class="icon w-6 text-center" aria-hidden="true"><use href="static/img/icons.svg#location-dot"></use></svg>Lebach</div>
                                 </div>
                             </div>
                             <ul class="list-disc pl-[19px]">
@@ -471,6 +548,8 @@
         <span>&copy; 2026 Yannick Sautter</span>
         <span class="px-2 text-gray-400">&middot;</span>
         <a href="impressum.html" class="no-underline text-inherit transition-opacity duration-300 hover:opacity-60">Impressum</a>
+        <span class="px-2 text-gray-400">&middot;</span>
+        <a href="datenschutz.html" class="no-underline text-inherit transition-opacity duration-300 hover:opacity-60">Datenschutz</a>
     </section>
 </main>
 </body>

@@ -8,17 +8,19 @@
     <meta name="author" content="Yannick Sautter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sautter.dev/impressum.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/vendor/fa/all.min.css">
     <link rel="stylesheet" href="static/css/sourcecodepro.css">
 </head>
 <body class="m-0 p-0 bg-dark-bg">
 
 <header class="fixed w-full h-[50px] pt-[5px] top-0 flex justify-end items-center bg-[rgba(150,150,150,0.25)] backdrop-blur-sm shadow-md z-[1000]">
-    <nav class="mr-[2%]">
-        <a href="index.html" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">HOME</a>
-        <a href="index.html#about" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">ABOUT</a>
-        <a href="index.html#cv" class="no-underline pr-5 text-white text-xl font-roboto font-normal leading-[1.75] tracking-[0.15em] transition-opacity duration-300 hover:opacity-60">CV</a>
+    <nav class="mr-[2%] flex">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="index.html#about" class="nav-link">ABOUT</a>
+        <a href="index.html#cv" class="nav-link">CV</a>
     </nav>
 </header>
 
@@ -40,12 +42,12 @@
             <ul class="list-none p-0 m-0 text-[18px] leading-[1.75]">
                 <li class="py-[0.2rem]">
                     <a href="mailto:contact@sautter.dev" class="no-underline text-inherit transition-opacity duration-300 hover:opacity-60">
-                        <i class="fa-solid fa-envelope w-[23px] text-center"></i> contact@sautter.dev
+                        <svg class="icon w-[23px] text-center" aria-hidden="true"><use href="static/img/icons.svg#envelope"></use></svg> contact@sautter.dev
                     </a>
                 </li>
                 <li class="py-[0.2rem]">
                     <a href="tel:+4917634252442" class="no-underline text-inherit transition-opacity duration-300 hover:opacity-60">
-                        <i class="fa-solid fa-phone w-[23px] text-center"></i> +49 176 3425 2442
+                        <svg class="icon w-[23px] text-center" aria-hidden="true"><use href="static/img/icons.svg#phone"></use></svg> +49 176 3425 2442
                     </a>
                 </li>
             </ul>
@@ -71,6 +73,8 @@
 
     <section id="footer" class="flex justify-center py-4 bg-dark-bg items-center text-white font-sans w-full">
         <span>&copy; 2026 Yannick Sautter</span>
+        <span class="px-2 text-gray-400">&middot;</span>
+        <a href="datenschutz.html" class="no-underline text-inherit transition-opacity duration-300 hover:opacity-60">Datenschutz</a>
         <span class="px-2 text-gray-400">&middot;</span>
         <a href="index.html" class="no-underline text-inherit transition-opacity duration-300 hover:opacity-60">Startseite</a>
     </section>
