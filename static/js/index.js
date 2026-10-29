@@ -124,4 +124,106 @@ window.onload = function() {
     document.querySelectorAll('.timeline-item').forEach(el => {
         timelineObserver.observe(el);
     });
+
+    initChips();
+    initLightbox();
 };
+
+// Chip lists with data-max show only the first N chips plus a "+M" toggle.
+// Without JS every chip is visible.
+function initChips() {
+    document.querySelectorAll('.chips[data-max]').forEach(list => {
+        const max = parseInt(list.dataset.max, 10);
+        const items = Array.from(list.children);
+        if (items.length <= max + 1) return; // "+1" would be silly
+        items.slice(max).forEach(li => li.classList.add('chip-more'));
+        const toggle = document.createElement('li');
+        toggle.className = 'chip-toggle';
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        const more = '+' + (items.length - max);
+        btn.textContent = more;
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Show ' + (items.length - max) + ' more');
+        btn.addEventListener('click', () => {
+            const open = list.classList.toggle('expanded');
+            btn.textContent = open ? 'less' : more;
+            btn.setAttribute('aria-expanded', String(open));
+        });
+        toggle.appendChild(btn);
+        list.appendChild(toggle);
+    });
+}
+
+// Photo lightbox. Without JS the gallery links simply open the full-size image.
+function initLightbox() {
+    const dialog = document.getElementById('lightbox');
+    const photos = Array.from(document.querySelectorAll('.photo'));
+    if (!dialog || !photos.length || typeof dialog.showModal !== 'function') return;
+
+    const img = dialog.querySelector('img');
+    const caption = dialog.querySelector('figcaption');
+    let index = 0;
+
+    const full = i => photos[i].querySelector('a').href;
+    const preload = i => { new Image().src = full((i + photos.length) % photos.length); };
+
+    function show(i) {
+        index = (i + photos.length) % photos.length;
+        const fig = photos[index];
+        img.classList.add('loading');
+        img.onload = () => img.classList.remove('loading');
+        img.src = full(index);
+        img.alt = fig.querySelector('img').alt;
+        caption.innerHTML = fig.querySelector('figcaption').innerHTML;
+        preload(index + 1);
+        preload(index - 1);
+    }
+
+    photos.forEach((fig, i) => {
+        fig.querySelector('a').addEventListener('click', e => {
+            e.preventDefault();
+            dialog.classList.remove('single');
+            show(i);
+            dialog.showModal();
+        });
+    });
+
+    // Project screenshots: same dialog, single image without prev/next.
+    document.querySelectorAll('a[data-zoom]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const thumb = link.querySelector('img');
+            dialog.classList.add('single');
+            img.src = link.href;
+            img.alt = thumb.alt;
+            caption.textContent = thumb.alt;
+            dialog.showModal();
+        });
+    });
+    const single = () => dialog.classList.contains('single');
+
+    dialog.querySelector('.lb-close').addEventListener('click', () => dialog.close());
+    dialog.querySelector('.lb-prev').addEventListener('click', () => show(index - 1));
+    dialog.querySelector('.lb-next').addEventListener('click', () => show(index + 1));
+    // Click on the dark background (not on the image or a button) closes.
+    dialog.addEventListener('click', e => {
+        if (e.target === dialog || e.target.tagName === 'FIGURE') dialog.close();
+    });
+    dialog.addEventListener('keydown', e => {
+        if (single()) return;
+        if (e.key === 'ArrowRight') show(index + 1);
+        if (e.key === 'ArrowLeft') show(index - 1);
+    });
+    dialog.addEventListener('close', () => { img.removeAttribute('src'); });
+
+    // Swipe on touch devices
+    let touchX = null;
+    dialog.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    dialog.addEventListener('touchend', e => {
+        if (touchX === null || single()) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+        touchX = null;
+    });
+}
